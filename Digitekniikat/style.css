@@ -1,0 +1,17 @@
+/* Taustan väri */
+.navbar-custom {
+    background-color: blueviolet;
+}
+
+/* Tekstin väri */
+.navbar-custom .navbar-text {
+    color: white;
+}
+
+/* Linkin väri */
+.navbar-custom .navbar-nav .nav-link {
+    color: #FFFFFF;
+}
+
+/* Aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link, 
