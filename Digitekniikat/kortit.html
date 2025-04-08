@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Slow Sunday</title>
+</head>
+
+
+<body>
+    <main>
+        <!-- Navigaatio -->
+        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
+            <div class="container-fluid">
+
+                <!-- Logokuva -->
+                <div class="navi-brad navbar-text">
+                    <a href="index.html">
+                        <img src="istockphoto-875361998-1024x1024.jpg" alt="Logo" width="75">
+                        <span class="navbar-text"> RMNKRVS </span>
+                    </a>
+                </div>
+
+                <!-- Hampurilaisvalikko -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collabsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Hampparivalikon sisus -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                    <!-- Navigaatiolinkit -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Etusivu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carusel.html">Karuselli</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ruudukko.html">Ruudukko</a>
+                        </li>
+
+                        <!-- Alasvetovalikko -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Alasvetovalikko</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="kortit.html">Kortit</a></li>
+                                <li><a class="dropdown-item" href="haitari.html">Haitari</a></li>
+                                <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h2>Aamupalareseptejä</h2>
+        <br>
+        <p>Tutustu täältä maukkaimpiin aamiaisresepteihin. Kaikki reseptit ovat helppoja ja nopeita ja mukautettavissa huomioimaan erilaiset allergiat ja ruokavaliot.</p>
+
+        <!-- Reseptikortit -->
+
+        <div class="container py-5">
+            <div class="row">
+
+                <!-- Smoothiebowl -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="breakfast-smoothiebowl.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Smoothiebowl">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Smoothiebowl</h5>
+                            <p class="card-text">Raikas marjaisa smoothiekulho granolalla ja hedelmillä.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#smoothiebowlModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avocado toast -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="breakfast-toat.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Avocado toast">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Avocado toast</h5>
+                            <p class="card-text">Täyteläinen avokadoleipä chilillä ja limellä.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#avocadoModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chiapudding -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="breakfast-chiapudding.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Chiapudding">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chiapudding</h5>
+                            <p class="card-text">Kookoksinen chia-vanukas marjoilla ja pähkinöillä.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#chiapuddingModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overnight oats -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="https://via.placeholder.com/400x200?text=Overnight+Oats" class="card-img-top"
+                            style="object-fit: cover; height: 200px;" alt="Overnight oats">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Overnight oats</h5>
+                            <p class="card-text">Yön yli tekeytyvä kaurapuuro mantelimaitoon ja marjoihin.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                data-bs-target="#overnightModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pancakes -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="https://via.placeholder.com/400x200?text=Pancakes" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Pannukakut">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pannukakut</h5>
+                            <p class="card-text">Amerikkalaiset pannarit vaahterasiirapilla ja marjoilla.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#pancakesModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burrito -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="https://via.placeholder.com/400x200?text=Breakfast+Burrito" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Breakfast burrito">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aamiaisburrito</h5>
+                            <p class="card-text">Munakasta, papuja ja juustoa tortillan sisään käärittynä.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#burritoModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Granola & Yogurt -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="https://via.placeholder.com/400x200?text=Granola+Yogurt" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Granola ja jogurtti">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Granola ja jogurtti</h5>
+                            <p class="card-text">Rapea granola kermaisen jogurtin ja hunajan kera.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#granolaModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fruit platter -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="https://via.placeholder.com/400x200?text=Fruit+Platter" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Fruit platter">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Hedelmälautanen</h5>
+                            <p class="card-text">Tuoreita hedelmiä väreissä ja muodoissa, jotka herättävät ilon.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#fruitModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakfast wrap -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="https://via.placeholder.com/400x200?text=Breakfast+Wrap" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Breakfast wrap">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aamiaiswrap</h5>
+                            <p class="card-text">Nopea wrap munakkaalla, pinaatilla ja fetalla.</p>
+                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#wrapModal">Katso resepti</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modaalit reseptikorteille -->
+
+        <!-- Smoothiebowl -->
+        <div class="modal fade" id="smoothiebowlModal" tabindex="-1" aria-labelledby="smoothiebowlLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="smoothiebowlLabel">Smoothiebowl-resepti</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Ainekset:</strong></p>
+                        <ul>
+                            <li>1 banaani</li>
+                            <li>1 dl pakastemarjoja</li>
+                            <li>1 dl kaurajuomaa</li>
+                            <li>1 tl chia-siemeniä</li>
+                            <li>1/2 dl granolaa</li>
+                            <li>Tuoreita marjoja koristeeksi</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Blendaa ainekset sileäksi smoothieksi.</li>
+                            <li>Kaada kulhoon ja koristele.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Avocado toast -->
+        <div class="modal fade" id="avocadoModal" tabindex="-1" aria-labelledby="avocadoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="avocadoLabel">Avocado toast -resepti</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Ainekset:</strong></p>
+                        <ul>
+                            <li>1 viipale leipää</li>
+                            <li>1/2 avokadoa</li>
+                            <li>Limeä, suolaa ja chilihiutaleita</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Paahda leipä.</li>
+                            <li>Murskaa avokado haarukalla ja mausta.</li>
+                            <li>Levita leivälle ja koristele.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chiapudding -->
+        <div class="modal fade" id="chiapuddingModal" tabindex="-1" aria-labelledby="chiapuddingLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="chiapuddingLabel">Chiapudding-resepti</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Ainekset:</strong></p>
+                        <ul>
+                            <li>2 dl kookosmaitoa</li>
+                            <li>2 rkl chia-siemeniä</li>
+                            <li>1 tl hunajaa</li>
+                            <li>Marjoja ja pähkinöitä koristeluun</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Sekoita kookosmaito, chia ja hunaja.</li>
+                            <li>Anna tekeytyä jääkaapissa vähintään 4 h tai yön yli.</li>
+                            <li>Tarjoile koristeltuna.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overnight oats -->
+        <div class="modal fade" id="overnightModal" tabindex="-1" aria-labelledby="overnightLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="overnightLabel">Overnight oats -resepti</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Ainekset:</strong></p>
+                        <ul>
+                            <li>1 dl kaurahiutaleita</li>
+                            <li>1 dl mantelimaitoa</li>
+                            <li>1 tl chia-siemeniä</li>
+                            <li>Marjoja tai banaania</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Sekoita kaikki ainekset purkkiin.</li>
+                            <li>Sulje kansi ja laita jääkaappiin yöksi.</li>
+                            <li>Koristele aamulla ja nauti.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pancakes -->
+        <div class="modal fade" id="pancakesModal" tabindex="-1" aria-labelledby="pancakesLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pancakesLabel">Pannukakku-resepti</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Ainekset:</strong></p>
+                        <ul>
+                            <li>2 dl vehnäjauhoja</li>
+                            <li>2 tl leivinjauhetta</li>
+                            <li>2 rkl sokeria</li>
+                            <li>2 dl maitoa</li>
+                            <li>1 kananmuna</li>
+                            <li>2 rkl voisulaa</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Sekoita kuivat aineet.</li>
+                            <li>Lisää nesteet ja sekoita tasaiseksi.</li>
+                            <li>Paista pannulla molemmin puolin.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Burrito -->
+        <div class="modal fade" id="burritoModal" tabindex="-1" aria-labelledby="burritoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="burritoLabel">Aamiaisburrito-resepti</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Ainekset:</strong></p>
+                        <ul>
+                            <li>Tortillalettu</li>
+                            <li>Munakasta</li>
+                            <li>Mustapapuja</li>
+                            <li>Juustoa</li>
+                            <li>Salsaa tai guacamolea</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Valmista täytteet pannulla.</li>
+                            <li>Laita kaikki tortillan sisään ja kääri tiukaksi burritoksi.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Granola & Yogurtti -->
+        <div class="modal fade" id="granolaModal" tabindex="-1" aria-labelledby="granolaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="granolaLabel">Granola ja jogurtti -resepti</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Ainekset:</strong></p>
+                        <ul>
+                            <li>2 dl kreikkalaista jogurttia</li>
+                            <li>1 dl granolaa</li>
+                            <li>1 rkl hunajaa</li>
+                            <li>Tuoreita marjoja</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Laita jogurtti kulhoon.</li>
+                            <li>Lisää päälle granola, hunaja ja marjat.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hedelmälautanen -->
+        <div class="modal fade" id="fruitModal" tabindex="-1" aria-labelledby="fruitLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fruitLabel">Hedelmälautanen</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Valitse hedelmät:</strong></p>
+                        <ul>
+                            <li>Kiivi</li>
+                            <li>Appelsiini</li>
+                            <li>Viinirypäleet</li>
+                            <li>Mango</li>
+                            <li>Banaani</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Pilko ja asettele lautaselle kauniisti.</li>
+                            <li>Tarjoile sellaisenaan tai esim. jogurtin kera.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breakfast wrap -->
+        <div class="modal fade" id="wrapModal" tabindex="-1" aria-labelledby="wrapLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="wrapLabel">Aamiaiswrap-resepti</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Ainekset:</strong></p>
+                        <ul>
+                            <li>Täysjyvätortilla</li>
+                            <li>Munakokkelia</li>
+                            <li>Tuore pinaatti</li>
+                            <li>Fetajuustoa</li>
+                        </ul>
+                        <p><strong>Ohje:</strong></p>
+                        <ol>
+                            <li>Paista munakokkeli ja mausta.</li>
+                            <li>Laita kaikki tortillan sisään ja kääri wrapiksi.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -7,20 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
     <title>Slow Sunday</title>
 </head>
+
 
 <body>
     <main>
         <!-- Navigaatio -->
-        <nav class="navbar navbar-expand-sm navbar-custom">
+        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
             <div class="container-fluid">
 
-                <!-- Logo & kuva -->
+                <!-- Logokuva -->
                 <div class="navi-brad navbar-text">
                     <a href="index.html">
                         <img src="istockphoto-875361998-1024x1024.jpg" alt="Logo" width="75">
-                        <span class="navbar-text"> RMNKRVS </span>
+                        <span class="navbar-text"> Slow Sunday </span>
                     </a>
                 </div>
 
@@ -43,7 +45,7 @@
                             <a class="nav-link" href="carusel.html">Karuselli</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Kolmas</a>
+                            <a class="nav-link" href="ruudukko.html">Ruudukko</a>
                         </li>
 
                         <!-- Alasvetovalikko -->
@@ -51,9 +53,9 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown">Alasvetovalikko</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Linkki</a></li>
-                                <li><a class="dropdown-item" href="#">Linkki</a></li>
-                                <li><a class="dropdown-item" href="#">Linkki</a></li>
+                                <li><a class="dropdown-item" href="kortit.html">Reseptit</a></li>
+                                <li><a class="dropdown-item" href="haitari.html">Haitari</a></li>
+                                <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -61,20 +63,161 @@
             </div>
         </nav>
 
-        <div class="container">
-            <h1>Tässä kiva mallisivu</h1>
-            <p>Tämä sisältö on .container luokan sisällä.</p>
-            <p>The .container luokka on osa bootstrap-tyylejä. Se tarjoaa sivun leveyteen reagoivan säiliön.</p>
-        </div>
+        <!-- Kuvakaruselli -->
 
-        <div class="container p-5 my-5 bg-danger text-white">
-            <h2>Sininen säiliö</h2>
-            <p>Tässä säiliössä on lisää sisältöä.</p>
-        </div>
+        <div id="carouselExample" class="carousel slide">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+
+                <!-- Kuvat -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="breakfast-smoothiebowls.jpg" class="d-block w-100" alt="Tuorepuurot">
+                        <div class="carousel-caption d-md">
+                            <h5>Värikäs puurobaari</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="breakfast-toat.jpg" class="d-block w-100" alt="Avokado toast">
+                        <div class="carousel-caption d-md">
+                            <h5>Avokado-feta toast</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="breakfast-smoothiebowl.jpg" class="d-block w-100" alt="Smoothiebowl">
+                        <div class="carousel-caption d-md">
+                            <h5>Hedelmäinen smoothiebowl</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="breakfast-chiapudding.jpg" class="d-block w-100" alt="Chiapudding">
+                        <div class="carousel-caption d-md">
+                            <h5>Pirtsakka chiavanukas</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nuolet -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Etusivun sisältö -->
+
+            <div class="container">
+                <h2>Tervetuloa!</h2>
+                <p>Tämä sivusto on omistettu ihanille aamuhetkille, lempeille aamupaloille ja rauhalliselle alulle
+                    päivälle. Tutustu resepteihin, nappaa vinkit hitaisiin aamuhetkiin ja inspiroidu
+                    aamupalakulttuurista ympäri maailmaa.</p>
+            </div>
+
+            <div class="container p-5 my-5 bg-danger text-white">
+                <h2>Sininen säiliö</h2>
+                <p>Tässä säiliössä on lisää sisältöä.</p>
+            </div>
+
+            <!-- Suosituimmat reseptit kortteina -->
+
+            <div class="card-group">
+                <div class="card text-bg-primary">
+                    <img src="tulip-4739907_1280.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card text-bg-secondary">
+                    <img src="roses-3901824_1280.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card text-bg-dark">
+                    <img src="butterfly-7421658_640.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container py-5">
+                <div class="row">
+    
+                    <!-- Smoothiebowl -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="breakfast-smoothiebowl.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Smoothiebowl">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Smoothiebowl</h5>
+                                <p class="card-text">Raikas marjaisa smoothiekulho granolalla ja hedelmillä.</p>
+                                <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#smoothiebowlModal">Katso resepti</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Avocado toast -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="breakfast-toat.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Avocado toast">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Avocado toast</h5>
+                                <p class="card-text">Täyteläinen avokadoleipä chilillä ja limellä.</p>
+                                <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#avocadoModal">Katso resepti</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Chiapudding -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="breakfast-chiapudding.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Chiapudding">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Chiapudding</h5>
+                                <p class="card-text">Kookoksinen chia-vanukas marjoilla ja pähkinöillä.</p>
+                                <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#chiapuddingModal">Katso resepti</button>
+                            </div>
+                        </div>
+                    </div>
 
 
 
     </main>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>2025 Ramona Kirves</p>
+    </footer>
 
 </body>
 
