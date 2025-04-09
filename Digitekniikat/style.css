@@ -30,6 +30,12 @@
     object-fit: cover;     
   }
 
+  @media (max-width: 768px) {
+    .carousel-image {
+      height: 250px;
+    }
+  }
+
 /* Sateenkaariruudukon tyyli */
 
 .rainbow-col-1 { background-color: #FF0000; } /* Red */
