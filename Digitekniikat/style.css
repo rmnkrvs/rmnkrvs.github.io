@@ -1,7 +1,7 @@
-/* Taustan väri */
+/* Taustan väri 
 .navbar-custom {
     background-color: green;
-}
+} */
 
 /* Tekstin väri */
 .navbar-custom .navbar-text {
@@ -51,4 +51,14 @@
     padding: 20px;
     color: white;
     text-align: center;
+}
+
+/* Accordion */ 
+.accordion-button:not(.collapsed) {
+  background-color: #d4edda; /* vaaleanvihreä */
+  color: #155724; /* tumma vihreä teksti (sopii taustaan) */
+}
+
+.accordion-button:focus {
+  box-shadow: none; /* poistaa sinisen kehän */
 }

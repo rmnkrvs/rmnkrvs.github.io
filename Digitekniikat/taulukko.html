@@ -14,15 +14,22 @@
 
 <body>
     <main>
+
+        <!-- Alert eli yläreunan ilmoituspalkki -->
+        <div class="alert alert-success text-center mb-0" role="alert">
+            🆕 Uusi kevätresepti lisätty: testaa maukas aamiaiswrap!
+        </div>
+
         <!-- Navigaatio -->
-        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
+
+        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark bg-success">
             <div class="container-fluid">
 
                 <!-- Logokuva -->
                 <div class="navi-brad navbar-text">
                     <a href="index.html">
                         <img src="istockphoto-875361998-1024x1024.jpg" alt="Logo" width="75">
-                        <span class="navbar-text"> RMNKRVS </span>
+                        <span class="navbar-text"> Slow Sunday </span>
                     </a>
                 </div>
 
@@ -42,10 +49,10 @@
                             <a class="nav-link" href="index.html">Etusivu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="carusel.html">Karuselli</a>
+                            <a class="nav-link" href="kortit.html">Reseptit</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ruudukko.html">Ruudukko</a>
+                            <a class="nav-link" href="taulukko.html">Inspiraatio</a>
                         </li>
 
                         <!-- Alasvetovalikko -->
@@ -53,7 +60,7 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown">Alasvetovalikko</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="kortit.html">Kortit</a></li>
+                                <li><a class="dropdown-item" href="kortit.html">Reseptit</a></li>
                                 <li><a class="dropdown-item" href="haitari.html">Haitari</a></li>
                                 <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
                             </ul>
@@ -63,50 +70,194 @@
             </div>
         </nav>
 
-        <!-- Taulukko -->
+        <!-- Aamurutiinit accordion -->
 
-        <!-- Responsiivinen taulukko-->
-        <table class="table">
-            <thead>
-                <tr class="table-primary">
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table-secondary">
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr class="table-success">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr class="table-warning">
-                    <th scope="row">3</th>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>@social</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="container py-5">
+            <h2 class="mb-4">Aamurutiinit</h2>
+            <div class="accordion" id="aamurutiinitAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            🌞 Rauhallinen aamu ennen töitä
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#aamurutiinitAccordion">
+                        <div class="accordion-body">
+                            Herää 30 minuuttia aiemmin ja varaa itsellesi aikaa ilman kiirettä. Syö rauhassa aamiainen,
+                            kuuntele musiikkia tai istu hetki hiljaisuudessa ennen päivän alkua.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            📵 Puhelimeton aamu
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#aamurutiinitAccordion">
+                        <div class="accordion-body">
+                            Vältä puhelimen käyttöä ensimmäisen tunnin ajan. Näin mielesi pysyy levollisempana ja aamu
+                            alkaa keskittyneemmin.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            🧘 3 minuutin hengitysharjoitus
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#aamurutiinitAccordion">
+                        <div class="accordion-body">
+                            Istu mukavasti, sulje silmät ja hengitä syvään: sisään neljään laskien, pidä hetki, ulos
+                            kuuteen laskien. Toista muutaman minuutin ajan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <h3>Väriä tauluun</h3>
-        <p> Kato Bootstrap:in sivuilta kuinka saat väriä tauluusi. Sinun pitää antaa kullekin riville oma luokka, sen
-            mukaan minkä värin haluat</p>
-        <p>Esimerkiksi yllä olevan taulukon ensimmäinen rivi on määritelty</p>
-        <xmp>
-            <tr class="table-primary"></tr>
-        </xmp>
-        <p> Katso ja lue lisää täältä <a
-                href="https://getbootstrap.com/docs/5.3/content/tables/">https://getbootstrap.com/docs/5.3/content/tables/</a>
-        </p>
+        <!-- Vertailutaulukko aamupaloista -->
+
+        <div class="container py-5">
+            <h2 class="mb-4">Vertaa aamupaloja</h2>
+
+            <!-- Suodatusnapit -->
+            <div class="mb-3 text-left">
+                <button class="btn btn-outline-primary me-2 filter-btn" data-filter="all">Kaikki</button>
+                <button class="btn btn-outline-success me-2 filter-btn" data-filter="vegan">Vegaaninen</button>
+                <button class="btn btn-outline-warning text-dark filter-btn" data-filter="easy">Helppo</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle text-center" id="breakfastTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Aamupala</th>
+                            <th>Valmistusaika</th>
+                            <th>Vaikeus</th>
+                            <th>Ravintoarvo</th>
+                            <th>Vegaaninen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-vegan="true" data-difficulty="easy">
+                            <td><a href="kortit.html#smoothiebowl" class="text-success">Smoothiebowl</a></td>
+                            <td>5 min</td>
+                            <td><span class="badge bg-success">Helppo</span></td>
+                            <td>Kuitu, C-vitamiini</td>
+                            <td><span class="badge bg-success">Kyllä</span></td>
+                        </tr>
+                        <tr data-vegan="true" data-difficulty="easy">
+                            <td><a href="kortit.html#avocado-toast" class="text-success">Avokado toast</a></td>
+                            <td>7 min</td>
+                            <td><span class="badge bg-success">Helppo</span></td>
+                            <td>Hyvät rasvat</td>
+                            <td><span class="badge bg-success">Kyllä</span></td>
+                        </tr>
+                        <tr data-vegan="true" data-difficulty="medium">
+                            <td><a href="kortit.html#chiapudding" class="text-success">Chiapudding</a></td>
+                            <td>5 min (+ yö)</td>
+                            <td><span class="badge bg-warning text-dark">Keskitaso</span></td>
+                            <td>Kuitu, Omega-3</td>
+                            <td><span class="badge bg-success">Kyllä</span></td>
+                        </tr>
+                        <tr data-vegan="false" data-difficulty="medium">
+                            <td><a href="kortit.html#pancakes" class="text-success">Pannukakut</a></td>
+                            <td>15 min</td>
+                            <td><span class="badge bg-warning text-dark">Keskitaso</span></td>
+                            <td>Hiilihydraatti</td>
+                            <td><span class="badge bg-danger">Ei</span></td>
+                        </tr>
+                        <tr data-vegan="false" data-difficulty="easy">
+                            <td><a href="kortit.html#granola" class="text-success">Granola & jogurtti</a></td>
+                            <td>3 min</td>
+                            <td><span class="badge bg-success">Helppo</span></td>
+                            <td>Proteiini, kuitu</td>
+                            <td><span class="badge bg-danger">Ei</span></td>
+                        </tr>
+                        <tr data-vegan="false" data-difficulty="medium">
+                            <td><a href="kortit.html#burrito" class="text-success">Aamiaisburrito</a></td>
+                            <td>10 min</td>
+                            <td><span class="badge bg-warning text-dark">Keskitaso</span></td>
+                            <td>Proteiini, kuitu</td>
+                            <td><span class="badge bg-danger">Ei</span></td>
+                        </tr>
+                        <tr data-vegan="true" data-difficulty="easy">
+                            <td><a href="kortit.html#fruits" class="text-success">Hedelmälautanen</a></td>
+                            <td>5 min</td>
+                            <td><span class="badge bg-success">Helppo</span></td>
+                            <td>Vitamiinit, nesteytys</td>
+                            <td><span class="badge bg-success">Kyllä</span></td>
+                        </tr>
+                        <tr data-vegan="false" data-difficulty="medium">
+                            <td><a href="kortit.html#wrap" class="text-success">Aamiaiswrap</a></td>
+                            <td>8 min</td>
+                            <td><span class="badge bg-warning text-dark">Keskitaso</span></td>
+                            <td>Proteiini, vihreät kasvikset</td>
+                            <td><span class="badge bg-danger">Ei</span></td>
+                        </tr>
+                        <tr data-vegan="true" data-difficulty="easy">
+                            <td><a href="kortit.html#overnight-oats" class="text-success">Overnight oats</a></td>
+                            <td>5 min (+ yö)</td>
+                            <td><span class="badge bg-success">Helppo</span></td>
+                            <td>Kuitu, B-vitamiini</td>
+                            <td><span class="badge bg-success">Kyllä</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const rows = document.querySelectorAll('#breakfastTable tbody tr');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+                    rows.forEach(row => {
+                        row.style.display = 'table-row';
+
+                        const isVegan = row.getAttribute('data-vegan') === 'true';
+                        const isEasy = row.getAttribute('data-difficulty') === 'easy';
+
+                        if (filter === 'vegan' && !isVegan) row.style.display = 'none';
+                        else if (filter === 'easy' && !isEasy) row.style.display = 'none';
+                        else if (filter !== 'all' && filter !== 'vegan' && filter !== 'easy') row.style.display = 'table-row';
+                    });
+                });
+            });
+        </script>
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center">Aamupaloja maailmalta</h2>
+    <div class="row g-4">
+  
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="photos etc/croissant-cafe.jpg" class="img-fluid rounded shadow-sm" alt="Ranska">
+        <p class="mt-2 text-center"><strong>🇫🇷 Ranska</strong><br><small>Croissant & café au lait</small></p>
+      </div>
+  
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="photos etc/japanese.jpg" class="img-fluid rounded shadow-sm" alt="Japani">
+        <p class="mt-2 text-center"><strong>🇯🇵 Japani</strong><br><small>Misokeitto ja riisi</small></p>
+      </div>
+  
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="photos etc/huevos-rancheros.jpg" class="img-fluid rounded shadow-sm" alt="Meksiko">
+        <p class="mt-2 text-center"><strong>🇲🇽 Meksiko</strong><br><small>Huevos rancheros</small></p>
+      </div>
+  
+    </div>
+  </div>
+
 
     </main>
 </body>

@@ -14,15 +14,22 @@
 
 <body>
     <main>
+
+        <!-- Alert eli yläreunan ilmoituspalkki -->
+        <div class="alert alert-success text-center mb-0" role="alert">
+            🆕 Uusi kevätresepti lisätty: testaa maukas aamiaiswrap!
+        </div>
+
         <!-- Navigaatio -->
-        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
+
+        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark bg-success">
             <div class="container-fluid">
 
                 <!-- Logokuva -->
                 <div class="navi-brad navbar-text">
                     <a href="index.html">
                         <img src="istockphoto-875361998-1024x1024.jpg" alt="Logo" width="75">
-                        <span class="navbar-text"> RMNKRVS </span>
+                        <span class="navbar-text"> Slow Sunday </span>
                     </a>
                 </div>
 
@@ -42,10 +49,10 @@
                             <a class="nav-link" href="index.html">Etusivu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="carusel.html">Karuselli</a>
+                            <a class="nav-link" href="kortit.html">Reseptit</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ruudukko.html">Ruudukko</a>
+                            <a class="nav-link" href="taulukko.html">Inspiraatio</a>
                         </li>
 
                         <!-- Alasvetovalikko -->
@@ -53,7 +60,7 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown">Alasvetovalikko</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="kortit.html">Kortit</a></li>
+                                <li><a class="dropdown-item" href="kortit.html">Reseptit</a></li>
                                 <li><a class="dropdown-item" href="haitari.html">Haitari</a></li>
                                 <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
                             </ul>
@@ -65,7 +72,7 @@
 
         <div class="container">
             <br>
-            <h2>Aamupalareseptejä</h2>
+            <h2>Aamiaisreseptejä</h2>
             <br>
             <p>Tutustu täältä maukkaimpiin aamiaisresepteihin. Kaikki reseptit ovat helppoja ja nopeita ja mukautettavissa huomioimaan erilaiset allergiat ja ruokavaliot.</p>
          </div>
@@ -76,111 +83,111 @@
             <div class="row">
 
                 <!-- Smoothiebowl -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="smoothiebowl" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="breakfast-smoothiebowl.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Smoothiebowl">
+                        <img src="photos etc/breakfast-smoothiebowl.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Smoothiebowl">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Smoothiebowl</h5>
                             <p class="card-text">Raikas marjaisa smoothiekulho granolalla ja hedelmillä.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#smoothiebowlModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#smoothiebowlModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Avocado toast -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="avocado-toast" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="breakfast-toat.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Avocado toast">
+                        <img src="photos etc/breakfast-toat.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Avocado toast">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Avocado toast</h5>
                             <p class="card-text">Täyteläinen avokadoleipä chilillä ja limellä.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#avocadoModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#avocadoModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Chiapudding -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="chiapudding" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="breakfast-chiapudding.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Chiapudding">
+                        <img src="photos etc/breakfast-chiapudding.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Chiapudding">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Chiapudding</h5>
                             <p class="card-text">Kookoksinen chia-vanukas marjoilla ja pähkinöillä.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#chiapuddingModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#chiapuddingModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Overnight oats -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="overnight-oats" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="https://via.placeholder.com/400x200?text=Overnight+Oats" class="card-img-top"
+                        <img src="photos etc/oats-overnight.jpg" class="card-img-top"
                             style="object-fit: cover; height: 200px;" alt="Overnight oats">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Overnight oats</h5>
                             <p class="card-text">Yön yli tekeytyvä kaurapuuro mantelimaitoon ja marjoihin.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal"
                                 data-bs-target="#overnightModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Pancakes -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="pancakes" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="https://via.placeholder.com/400x200?text=Pancakes" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Pannukakut">
+                        <img src="photos etc/breakfast-pancakes.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Pannukakut">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pannukakut</h5>
                             <p class="card-text">Amerikkalaiset pannarit vaahterasiirapilla ja marjoilla.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#pancakesModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#pancakesModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Burrito -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="burrito" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="https://via.placeholder.com/400x200?text=Breakfast+Burrito" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Breakfast burrito">
+                        <img src="photos etc/breakfast-taco.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Breakfast burrito">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Aamiaisburrito</h5>
                             <p class="card-text">Munakasta, papuja ja juustoa tortillan sisään käärittynä.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#burritoModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#burritoModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Granola & Yogurt -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="granola" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="https://via.placeholder.com/400x200?text=Granola+Yogurt" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Granola ja jogurtti">
+                        <img src="photos etc/breakfast-yogurt.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Granola ja jogurtti">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Granola ja jogurtti</h5>
                             <p class="card-text">Rapea granola kermaisen jogurtin ja hunajan kera.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#granolaModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#granolaModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Fruit platter -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="fruits" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="https://via.placeholder.com/400x200?text=Fruit+Platter" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Fruit platter">
+                        <img src="photos etc/breakfast-fruits.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Fruit platter">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Hedelmälautanen</h5>
                             <p class="card-text">Tuoreita hedelmiä väreissä ja muodoissa, jotka herättävät ilon.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#fruitModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#fruitModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Breakfast wrap -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div id="wrap" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="https://via.placeholder.com/400x200?text=Breakfast+Wrap" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Breakfast wrap">
+                        <img src="photos etc/breakfast-letut.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Breakfast wrap">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Aamiaiswrap</h5>
                             <p class="card-text">Nopea wrap munakkaalla, pinaatilla ja fetalla.</p>
-                            <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#wrapModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#wrapModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
