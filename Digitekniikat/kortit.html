@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
     <meta charset="UTF-8">
@@ -22,29 +22,27 @@
 
         <!-- Navigaatio -->
 
-        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark bg-success">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark bg-success py-1">
+            <div class="container d-flex justify-content-between align-items-center">
 
                 <!-- Logokuva -->
                 <div class="navi-brad navbar-text">
                     <a href="index.html">
-                        <img src="istockphoto-875361998-1024x1024.jpg" alt="Logo" width="75">
-                        <span class="navbar-text"> Slow Sunday </span>
+                        <img src="photos etc/slowsunday.png" alt="Logo" width="125">
                     </a>
                 </div>
 
                 <!-- Hampurilaisvalikko -->
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collabsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collabsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Hampparivalikon sisus -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
                     <!-- Navigaatiolinkit -->
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Etusivu</a>
                         </li>
@@ -54,17 +52,20 @@
                         <li class="nav-item">
                             <a class="nav-link" href="taulukko.html">Inspiraatio</a>
                         </li>
-
-                        <!-- Alasvetovalikko -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown">Alasvetovalikko</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="kortit.html">Reseptit</a></li>
-                                <li><a class="dropdown-item" href="haitari.html">Haitari</a></li>
-                                <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ruudukko.html">Uutiskirje</a>
                         </li>
+
+                        <!-- Alasvetovalikko
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Alasvetovalikko</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kortit.html">Reseptit</a></li>
+                            <li><a class="dropdown-item" href="haitari.html">Haitari</a></li>
+                            <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
+                        </ul>
+                    </li> -->
                     </ul>
                 </div>
             </div>
@@ -74,8 +75,8 @@
             <br>
             <h2>Aamiaisreseptejä</h2>
             <br>
-            <p>Tutustu täältä maukkaimpiin aamiaisresepteihin. Kaikki reseptit ovat helppoja ja nopeita ja mukautettavissa huomioimaan erilaiset allergiat ja ruokavaliot.</p>
-         </div>
+            <p>Tutustu täältä maukkaimpiin aamiaisresepteihin. Kaikki reseptit ovat helppoja ja nopeita ja mukautettavissa huomioimaan erilaiset allergiat ja ruokavaliot. Testaisitko tänään herkullista tuorepuuroa vai tuhteja pannukakkuja?</p>
+        </div>
 
         <!-- Reseptikortit -->
 
@@ -121,13 +122,11 @@
                 <!-- Overnight oats -->
                 <div id="overnight-oats" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div class="card h-100 d-flex flex-column">
-                        <img src="photos etc/oats-overnight.jpg" class="card-img-top"
-                            style="object-fit: cover; height: 200px;" alt="Overnight oats">
+                        <img src="photos etc/oats-overnight.jpg" class="card-img-top" style="object-fit: cover; height: 200px;" alt="Overnight oats">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Overnight oats</h5>
                             <p class="card-text">Yön yli tekeytyvä kaurapuuro mantelimaitoon ja marjoihin.</p>
-                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal"
-                                data-bs-target="#overnightModal">Katso resepti</button>
+                            <button type="button" class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#overnightModal">Katso resepti</button>
                         </div>
                     </div>
                 </div>
@@ -198,7 +197,8 @@
         <!-- Modaalit reseptikorteille -->
 
         <!-- Smoothiebowl -->
-        <div class="modal fade" id="smoothiebowlModal" tabindex="-1" aria-labelledby="smoothiebowlLabel" aria-hidden="true">
+        <div class="modal fade" id="smoothiebowlModal" tabindex="-1" aria-labelledby="smoothiebowlLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -258,7 +258,8 @@
         </div>
 
         <!-- Chiapudding -->
-        <div class="modal fade" id="chiapuddingModal" tabindex="-1" aria-labelledby="chiapuddingLabel" aria-hidden="true">
+        <div class="modal fade" id="chiapuddingModal" tabindex="-1" aria-labelledby="chiapuddingLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -466,6 +467,18 @@
                 </div>
             </div>
         </div>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="bg-success text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 Slow Sunday</p>
+            <p class="mb-0">
+            </p>
+        </div>
+    </footer>
 
 </body>
 

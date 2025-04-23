@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
     <meta charset="UTF-8">
@@ -22,29 +22,27 @@
 
         <!-- Navigaatio -->
 
-        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark bg-success">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-custom navbar-dark bg-success py-1">
+            <div class="container d-flex justify-content-between align-items-center">
 
                 <!-- Logokuva -->
                 <div class="navi-brad navbar-text">
                     <a href="index.html">
-                        <img src="istockphoto-875361998-1024x1024.jpg" alt="Logo" width="75">
-                        <span class="navbar-text"> Slow Sunday </span>
+                        <img src="photos etc/slowsunday.png" alt="Logo" width="125">
                     </a>
                 </div>
 
                 <!-- Hampurilaisvalikko -->
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collabsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collabsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Hampparivalikon sisus -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
                     <!-- Navigaatiolinkit -->
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Etusivu</a>
                         </li>
@@ -54,8 +52,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="taulukko.html">Inspiraatio</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ruudukko.html">Uutiskirje</a>
+                        </li>
 
-                        <!-- Alasvetovalikko -->
+                        <!-- Alasvetovalikko
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown">Alasvetovalikko</a>
@@ -64,59 +65,49 @@
                                 <li><a class="dropdown-item" href="haitari.html">Haitari</a></li>
                                 <li><a class="dropdown-item" href="taulukko.html">Taulukko</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <!-- Aamurutiinit accordion -->
+        <!-- Accordion: aamurutiinit haitarissa -->
 
         <div class="container py-5">
-            <h2 class="mb-4">Aamurutiinit</h2>
+            <h2 class="mb-4 text-center">Aamurutiinit</h2>
             <div class="accordion" id="aamurutiinitAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            🌞 Rauhallinen aamu ennen töitä
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 🌞 Rauhallinen aamu ennen töitä
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#aamurutiinitAccordion">
                         <div class="accordion-body">
-                            Herää 30 minuuttia aiemmin ja varaa itsellesi aikaa ilman kiirettä. Syö rauhassa aamiainen,
-                            kuuntele musiikkia tai istu hetki hiljaisuudessa ennen päivän alkua.
+                            Herää 30 minuuttia aiemmin ja varaa itsellesi aikaa ilman kiirettä. Syö rauhassa aamiainen, kuuntele musiikkia tai istu hetki hiljaisuudessa ennen päivän alkua. Kokeile myös aamusivuja, eli päiväkirjan kirjoittamista heti herättyä.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            📵 Puhelimeton aamu
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> 📵 Puhelimeton aamu
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#aamurutiinitAccordion">
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#aamurutiinitAccordion">
                         <div class="accordion-body">
-                            Vältä puhelimen käyttöä ensimmäisen tunnin ajan. Näin mielesi pysyy levollisempana ja aamu
-                            alkaa keskittyneemmin.
+                            Vältä puhelimen käyttöä ensimmäisen tunnin ajan. Näin mielesi pysyy levollisempana ja aamu alkaa keskittyneemmin.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            🧘 3 minuutin hengitysharjoitus
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> 🧘 3 minuutin hengitysharjoitus
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#aamurutiinitAccordion">
                         <div class="accordion-body">
-                            Istu mukavasti, sulje silmät ja hengitä syvään: sisään neljään laskien, pidä hetki, ulos
-                            kuuteen laskien. Toista muutaman minuutin ajan.
+                            Istu mukavasti, sulje silmät ja hengitä syvään: sisään neljään laskien, pidä hetki, ulos kuuteen laskien. Toista muutaman minuutin ajan ja tunnustele, miltä kehossasi tuntuu.
                         </div>
                     </div>
                 </div>
@@ -126,23 +117,24 @@
         <!-- Vertailutaulukko aamupaloista -->
 
         <div class="container py-5">
-            <h2 class="mb-4">Vertaa aamupaloja</h2>
+            <h2 class="mb-4 text-center">Vertaa aamupaloja</h2>
 
             <!-- Suodatusnapit -->
-            <div class="mb-3 text-left">
+            <div class="mb-3 text-center">
                 <button class="btn btn-outline-primary me-2 filter-btn" data-filter="all">Kaikki</button>
                 <button class="btn btn-outline-success me-2 filter-btn" data-filter="vegan">Vegaaninen</button>
                 <button class="btn btn-outline-warning text-dark filter-btn" data-filter="easy">Helppo</button>
             </div>
 
+            <!-- Vertailutaulukon sisältö -->
             <div class="table-responsive">
                 <table class="table table-bordered align-middle text-center" id="breakfastTable">
                     <thead class="table-light">
                         <tr>
                             <th>Aamupala</th>
                             <th>Valmistusaika</th>
-                            <th>Vaikeus</th>
-                            <th>Ravintoarvo</th>
+                            <th>Vaikeustaso</th>
+                            <th>Ravintoarvot</th>
                             <th>Vegaaninen</th>
                         </tr>
                     </thead>
@@ -215,6 +207,8 @@
             </div>
         </div>
 
+        <!-- Suodattimien toiminnallisuus -->
+
         <script>
             const filterButtons = document.querySelectorAll('.filter-btn');
             const rows = document.querySelectorAll('#breakfastTable tbody tr');
@@ -236,30 +230,54 @@
             });
         </script>
 
-<div class="container py-5">
-    <h2 class="mb-4 text-center">Aamupaloja maailmalta</h2>
-    <div class="row g-4">
-  
-      <div class="col-12 col-sm-6 col-md-4">
-        <img src="photos etc/croissant-cafe.jpg" class="img-fluid rounded shadow-sm" alt="Ranska">
-        <p class="mt-2 text-center"><strong>🇫🇷 Ranska</strong><br><small>Croissant & café au lait</small></p>
-      </div>
-  
-      <div class="col-12 col-sm-6 col-md-4">
-        <img src="photos etc/japanese.jpg" class="img-fluid rounded shadow-sm" alt="Japani">
-        <p class="mt-2 text-center"><strong>🇯🇵 Japani</strong><br><small>Misokeitto ja riisi</small></p>
-      </div>
-  
-      <div class="col-12 col-sm-6 col-md-4">
-        <img src="photos etc/huevos-rancheros.jpg" class="img-fluid rounded shadow-sm" alt="Meksiko">
-        <p class="mt-2 text-center"><strong>🇲🇽 Meksiko</strong><br><small>Huevos rancheros</small></p>
-      </div>
-  
-    </div>
-  </div>
+        <!-- Ruudukko: aamupaloja maailmalta -->
 
+        <div class="container py-5">
+            <h2 class="mb-4 text-center">Aamupaloja maailmalta</h2>
+            <div class="row g-4">
+
+                <!-- Kuvat -->
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <img src="photos etc/croissant-cafe.jpg" class="gallery-image" alt="Ranska">
+                    <p class="mt-2 text-center"><strong>🇫🇷 Ranska</strong><br><small>Croissant & café au lait</small>
+                    </p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <img src="photos etc/japanese.jpg" class="gallery-image" alt="Japani">
+                    <p class="mt-2 text-center"><strong>🇯🇵 Japani</strong><br><small>Misokeitto ja riisi</small></p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <img src="photos etc/huevos-rancheros.jpg" class="gallery-image" alt="Meksiko">
+                    <p class="mt-2 text-center"><strong>🇲🇽 Meksiko</strong><br><small>Huevos rancheros</small></p>
+                </div>
+
+            </div>
+        </div>
+
+         <!-- Progress bar: "Aamuenergiasi tänään" -->
+
+         <div class="mb-3">
+            <label for="energy" class="form-label">Aamuenergiasi tänään</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 80%;">80%</div>
+            </div>
+        </div>
 
     </main>
+
+    <!-- Footer -->
+
+    <footer class="bg-success text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">© 2025 Slow Sunday</p>
+            <p class="mb-0">
+            </p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
