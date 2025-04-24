@@ -1,5 +1,11 @@
+/* Sivuston fontti*/
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+/* Alert linkin väri */
+.alert a {
+  color: black;
 }
 
 /* Navigaatio tekstin väri */
@@ -31,14 +37,17 @@ body {
   }
 
 /* Accordion */ 
+
 .accordion-button:not(.collapsed) {
-  background-color: #d4edda; /* vaaleanvihreä */
-  color: #155724; /* tumma vihreä teksti */
+  background-color: #d4edda;
+  color: #155724;
 }
 
 .accordion-button:focus {
   box-shadow: none;
 }
+
+/* Kuvagalleria */
 
 .gallery-image {
   width: 100%;
