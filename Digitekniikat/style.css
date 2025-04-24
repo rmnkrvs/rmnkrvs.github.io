@@ -59,3 +59,10 @@ body {
   }
 }
 
+/* Yhteydenottolomakkeen valokuva */
+.contact-image {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+}
+
