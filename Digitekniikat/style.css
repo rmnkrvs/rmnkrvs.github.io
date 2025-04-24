@@ -20,12 +20,8 @@ body {
 
 /* Kuvakaruselli */
 
-.carusel-caption {
-    background-color: white;
-    opacity: 0.8;
-}
-
 .carousel-image {
+    width: 100%;
     height: 500px;         
     object-fit: cover;     
   }
