@@ -95,9 +95,12 @@
 
             function pokekuva(obj) {
 
+                // Tallennetaan muuttujaan linkki, josta löytyy Pokemonin kuva
                 let pokeurl = obj.sprites.front_default;
+
+                // Kirjoitetaan kuva & nimi ja tyhjennetään hakumuuttuja
                 document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
-                document.getElementById("nimi").innerHTML = "<b>" + nimi + "</b>";
+                document.getElementById("nimi").innerHTML = `<b>${name}</b>`;
                 document.getElementById("pokemonName").value = "";
             }
 
