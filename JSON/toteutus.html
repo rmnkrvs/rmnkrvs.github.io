@@ -81,28 +81,33 @@
             //Funktio joka hakee tiedon objektista ja kirjoittaa ne sivulle
 
             function kerro(obj) {
-                let tiedot = "<h1>" + obj.otsikko + "</h1><br>"
-                    + obj.kuvaus + "<br><hr>"
-                    // Kuvan määäritteleminen:
-                    + "<p><img src=" + obj.kuva + "></p>"
-
-                    // Tekstin keskittäminen:
-                    + "<center><h3>" + "Opintojakso" + "</h3>" + "Nimi: " + obj.opintojakso.nimi + "<br>"
-                    + "Tunnus: " + obj.opintojakso.tunnus + "<br>"
-                    + "Opintopisteet: " + obj.opintojakso.opintopisteet + "<br></center>";
-
-                // Väliotsikko
-
-                tiedot += "<p><h3> Aiheet </h3>";
-
-                // for-silmukka, joka luo myös linkit sivulle
-                for (var i = 0; i < obj.tekniikat.length; i++) {
-                    tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
-                    tiedot += " <a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
+                const t = obj.toteutus;
+                let tiedot = `<h1>${t.nimi}</h1><hr>`;
+                tiedot += `<img src="${t.kuva}" alt="Kuva toteutuksesta"><br><br>`;
+                tiedot += `<p><strong>Osallistujia:</strong> ${t.osallistujat_lkm} kpl</p>`;
+                tiedot += `<ul>`;
+                for (let i = 0; i < t.osallistujat.length; i++) {
+                    tiedot += `<li>${t.osallistujat[i]}</li>`;
                 }
-                tiedot += "</p>";
+                tiedot += `</ul>`;
+                tiedot += `<p><strong>Aikataulu:</strong> ${t.alkamisaika} – ${t.loppumisaika}</p>`;
+                tiedot += `<p><strong>Kesto:</strong> ${t.kesto_viikkoina} viikkoa</p>`;
 
                 document.getElementById("vastaus").innerHTML = tiedot;
+            }
+
+            // Väliotsikko
+
+            tiedot += "<p><h3> Aiheet </h3>";
+
+            // for-silmukka, joka luo myös linkit sivulle
+            for (var i = 0; i < obj.tekniikat.length; i++) {
+                tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
+                tiedot += " <a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
+            }
+            tiedot += "</p>";
+
+            document.getElementById("vastaus").innerHTML = tiedot;
 
             }
 
