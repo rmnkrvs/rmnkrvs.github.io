@@ -60,38 +60,29 @@
         <script>
             fetch('toteutustietue.JSON')
 
-                // Muunnetaan vastaus JSON-tietueesta JS Olioksi
                 .then(function (response) {
                     return response.json();
                 })
-
-                //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
-                // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
 
                 .then(function (responseJson) {
                     kerro(responseJson);
                 })
 
-                // Virheen sattuessa: 
-
                 .catch(function (error) {
                     document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
                 })
 
-            //Funktio joka hakee tiedon objektista ja kirjoittaa ne sivulle
+            // Funktio joka hakee tiedon objektista ja kirjoittaa ne sivulle
 
             function kerro(obj) {
                 const t = obj.toteutus;
-                let tiedot = `<h1>${t.nimi}</h1><hr>`;
-                tiedot += `<img src="${t.kuva}" alt="Kuva toteutuksesta"><br><br>`;
-                tiedot += `<p><strong>Osallistujia:</strong> ${t.osallistujat_lkm} kpl</p>`;
-                tiedot += `<ul>`;
-                for (let i = 0; i < t.osallistujat.length; i++) {
-                    tiedot += `<li>${t.osallistujat[i]}</li>`;
-                }
-                tiedot += `</ul>`;
-                tiedot += `<p><strong>Aikataulu:</strong> ${t.alkamisaika} – ${t.loppumisaika}</p>`;
-                tiedot += `<p><strong>Kesto:</strong> ${t.kesto_viikkoina} viikkoa</p>`;
+
+                let tiedot = `<h2>${t.nimi}</h2>
+                <p><strong>${t.osallistujat_lkm} kpl</strong></p>
+                <p>${t.osallistujat.join(' ')}</p>
+                <p>${t.alkamisaika} - ${t.loppumisaika}</p>
+                <p>${t.kesto_viikkoina} viikkoa</p>
+                <img src="${t.kuva}" alt="Toteutuksen kuva">`;
 
                 document.getElementById("vastaus").innerHTML = tiedot;
             }
