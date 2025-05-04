@@ -13,7 +13,7 @@
 
     <style>
         img {
-            width: 100%;
+            width: 350px;
         }
     </style>
 
@@ -57,7 +57,7 @@
     <main>
         <div id="vastaus"></div>
 
-        <hi>Pokemon haku</hi>
+        <h1>Pokemon haku</h1>
         <p>
             <input type="text" id="pokemonName" placeholder="Kirjoita Pokemonin nimi">
             <button onclick="poke()">Hae</button>
@@ -65,6 +65,9 @@
 
         <div id="nimi">Kirjoita laatikkoon haettavan Pokemonin nimi.</div>
         <p id="kuva2"></p>
+        <p id="tyyppi"></p>
+        <p id="paino"></p>
+        <p id="pituus"></p>
         </p>
 
         <script>
@@ -84,7 +87,7 @@
                     })
 
                     .then(function (responseJson) {
-                        pokekuva(responseJson);
+                        pokekuva(responseJson, name);
                     })
 
                     .catch(function (error) {
@@ -92,9 +95,9 @@
                     })
             }
 
-            // Määritellään funktio pokekuva(obj)
+            // Määritellään funktio pokekuva
 
-            function pokekuva(obj) {
+            function pokekuva(obj, name) {
 
                 // Tallennetaan muuttujaan linkki, josta löytyy Pokemonin kuva
                 let pokeurl = obj.sprites.front_default;
@@ -103,6 +106,9 @@
                 document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
                 document.getElementById("nimi").innerHTML = "<b>" + name + "<b>";
                 document.getElementById("pokemonName").value = "";
+                document.getElementById("tyyppi").innerHTML = "";
+                document.getElementById("paino").innerHTML = "";
+                document.getElementById("pituus").innerHTML = "";
             }
 
             function kaanna() {
@@ -122,11 +128,16 @@
 
                     .then(function (data) {
                         let pokeurl = data.sprites.back_default;
+                        let tyyppi = data.types.map(t => t.type.name).join(", ");
+                        let paino = data.weight;
+                        let pituus = data.height;
 
                         document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
                         document.getElementById("nimi").innerHTML = "<b>" + name + "<b>";
+                        document.getElementById("tyyppi").innerHTML = "<p>Tyyppi: " + tyyppi + "</p>";
+                        document.getElementById("paino").innerHTML = "<p>Paino: " + paino + "</p>";
+                        document.getElementById("pituus").innerHTML = "<p>Pituus: " + pituus + "</p>";
                         document.getElementById("pokemonName").value = "";
-
                     })
             }
 
