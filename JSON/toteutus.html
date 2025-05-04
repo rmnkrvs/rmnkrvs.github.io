@@ -96,21 +96,6 @@
                 document.getElementById("vastaus").innerHTML = tiedot;
             }
 
-            // Väliotsikko
-
-            tiedot += "<p><h3> Aiheet </h3>";
-
-            // for-silmukka, joka luo myös linkit sivulle
-            for (var i = 0; i < obj.tekniikat.length; i++) {
-                tiedot += "<b>Aihe: " + obj.tekniikat[i].aihe + "</b>";
-                tiedot += " <a href=" + obj.tekniikat[i].linkki + ">" + obj.tekniikat[i].linkki + "</a>" + "<br>";
-            }
-            tiedot += "</p>";
-
-            document.getElementById("vastaus").innerHTML = tiedot;
-
-            }
-
         </script>
     </main>
 </body>
