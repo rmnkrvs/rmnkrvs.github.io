@@ -77,12 +77,14 @@
             function kerro(obj) {
                 const t = obj.toteutus;
 
-                let tiedot = `<h2>${t.nimi}</h2>
+                let tiedot = `<div class="card p-3">
+                <h2>${t.nimi}</h2>
                 <p><strong>${t.osallistujat_lkm} kpl</strong></p>
-                <p>${t.osallistujat.join(' ')}</p>
+                <p>${t.osallistujat.join(', ')}</p>
                 <p>${t.alkamisaika} - ${t.loppumisaika}</p>
                 <p>${t.kesto_viikkoina} viikkoa</p>
-                <img src="${t.kuva}" alt="Toteutuksen kuva">`;
+                <img src="${t.kuva}" alt="Toteutuksen kuva">
+                </div>`;
 
                 document.getElementById("vastaus").innerHTML = tiedot;
             }
