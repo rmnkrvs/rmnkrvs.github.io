@@ -1,0 +1,17 @@
+{
+    "toteutus": {
+      "nimi": "Digitekniikat",
+      "osallistujat_lkm": 5,
+      "osallistujat": [
+        "Harry Potter",
+        "Ron Weasley",
+        "Hermione Granger",
+        "Neville Longbottom",
+        "Luna Lovekiva"
+      ],
+      "alkamisaika": "13.1.2025",
+      "loppumisaika": "14.3.2025",
+      "kesto_viikkoina": 8,
+      "kuva": "toteutus.png"
+    }
+  }
