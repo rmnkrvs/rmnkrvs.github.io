@@ -1,69 +1,32 @@
  /* CSS tiedosto, joka sisältää tyylitiedot sivustolle */
- 
- main {
-     /* Taustaväri koko sivustolle */
-   background-color: #F1F5F4;
+
+ body {
+   margin: 0;
+   padding: 0;
    /* Fontti koko sivustolle */
    font-family: 'Roboto', sans-serif;
-   /* Poista oletus marginaalit */
-   margin: 0;
+   color: #2E2E2E;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    padding: 5%;
+   /* Taustaväri koko sivustolle */
+   background-color: #E6C3B5;
  }
 
- nav {
-   margin-bottom: 1%;
- }
+ /* NAVIGAATIO */
 
- .container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
- }
-
-/* Korttien muotoilut */
-
-.card {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 18px;
-  background-color: #f8f9fa;
-  text-align: center;
-}
-
-h1 {
-  font-size: 38px;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 26px;
-  font-weight: bold;
-}
-
-p {
-  font-size: 18px;
-  margin: 5px 0;
-}
-.weather-icon {
-  width: 80px;
-  height: 80px;
-}
-
- /* Google fontit */
-
- .meie-script-regular {
-   font-family: "Meie Script", cursive;
-   font-weight: 400;
-   font-style: normal;
- }
-
- /* BOOTSRAP NAVIGAATIO VÄRIT */
-
- /* taustan väri */
+ /* Taustan väri */
  .navbar-custom {
-   background-color: greenyellow;
+   background-color: #E2725B;
+   color: #ffffff;
  }
 
  /* Tekstin väri */
@@ -71,12 +34,7 @@ p {
    color: green;
  }
 
- /* linkin väri */
- .navbar-custom .navbar-nav .nav-link {
-   color: green;
- }
-
- /* aktiivisen & hover-linkin väri */
+ /* Aktiivisen & hover-linkin väri */
  .navbar-custom .nav-item.active .nav-link,
  .navbar-custom .nav-item:hover .nav-link {
    color: #ffffff;
@@ -84,6 +42,53 @@ p {
 
  .navbar-custom a {
    text-decoration: none;
+ }
+
+ nav {
+   margin-bottom: 1%;
+ }
+
+ /* Buttonit */
+
+ button {
+   background-color: #E2725B;
+ }
+
+ button:hover {
+   background-color: #C1440E;
+ }
+
+ /* Korttien muotoilut */
+
+ .card {
+   max-width: 600px;
+   margin: 20px auto;
+   padding: 45px;
+   border: 1px solid #ddd;
+   border-radius: 18px;
+   background-color: #F7F3E8;
+   text-align: center;
+ }
+
+ h1 {
+   font-size: 38px;
+   font-weight: bold;
+ }
+
+ h3 {
+   font-size: 26px;
+   font-weight: bold;
+   color: #C1440E;
+ }
+
+ p {
+   font-size: 18px;
+   margin: 5px 0;
+ }
+
+ .weather-icon {
+   width: 80px;
+   height: 80px;
  }
 
  /* JSON kuva luokka */
