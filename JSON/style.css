@@ -40,7 +40,6 @@
    font-weight: bold;
    color: #2E2E2E;
  }
-
  h3 {
    font-size: 26px;
    font-weight: bold;
@@ -55,20 +54,17 @@
 
  /* NAVIGAATIO */
 
- /* Taustan väri */
  .navbar-custom {
-   background-color: #E2725B;
+   background-color: #E2725B; /* Taustan väri */
  }
 
- /* Tekstin väri */
  .navbar-custom .navbar-text {
-   color: #ffffff;
+   color: #ffffff; /* Tekstin väri */
  }
 
- /* Aktiivisen & hover-linkin väri */
  .navbar-custom .nav-item.active .nav-link,
  .navbar-custom .nav-item:hover .nav-link {
-   color: #ffffff;
+   color: #ffffff; /* Aktiivisen & hover-linkin väri */
  }
 
  .navbar-custom a {
@@ -107,7 +103,7 @@
    height: 80px;
  }
 
- /* JSON kuva luokka */
+ /* JSON kuva */
  .img_luokka {
    width: 100%;
    max-width: 300px;
