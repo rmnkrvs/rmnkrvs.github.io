@@ -44,7 +44,7 @@
                         <a class="nav-link" href="pokehaku.html">Tehtävä 2 OSA I (Pokemon)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="eevee.html">Tehtävä 2 Osa II</a>
+                        <a class="nav-link" href="pokekaanna.html">Tehtävä 2 Osa II</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="saa.html">Tehtävä 3 </a>
@@ -55,7 +55,17 @@
     </nav>
 
     <main>
-        <div id="vastaus"></div>
+        <div class="weather-card" id="vastaus">
+            <h1>Sää Helsingissä</h1><br>
+            <p id="aika"></p><br>
+            <h3>Sää:</h3><br>
+            <p id="kuvaus"></p><br>
+            <h3>Lämpötila:</h3><br>
+            <p id="lampotila"></p><br>
+            <h3>Tuuli:</h3><br>
+            <p id="tuuli"></p><br>
+            <div id="weather-icon"></div><br>
+        </div>
 
         <script>
             fetch('https://api.openweathermap.org/data/2.5/weather?id=658225&appid=665ecd56dfc08dbb50feb8b8f5034e28&lang=fi&units=metric')
@@ -69,7 +79,7 @@
                 // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
 
                 .then(function (responseJson) {
-                    kerro(responseJson);
+                    saa(responseJson);
                 })
 
                 // Virheen sattuessa: 
@@ -78,9 +88,9 @@
                     document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
                 })
 
-            //Funktio joka hakee tiedon objektista ja kirjoittaa ne sivulle
+            // Funktio joka hakee tiedon objektista ja kirjoittaa ne sivulle
 
-            function kerro(obj) {
+            function saa(data) {
 
                 let pvm = new Date();
                 let hour = pvm.getHours();
@@ -88,14 +98,14 @@
 
                 let nyt = hour + ":" + (minute < 10 ? "0" : "") + minute;
 
-                let tiedot = 
-                    "<h1>Sää Helsingissä</h1><br>"
-                    + "<p>Sää kello </p>" + nyt + "<br>"
-                    + "<h3>Sää:</h3>" + obj.weather[0].description + "<br>"
-                    + "<p>Lämpötila: </p>" + obj.main.temp + " °C<br>"
-                    + "<p>Tuuli: </p>" + obj.wind.speed + " m/s<br>";
+                document.getElementById("aika").textContent = "Sää kello " + nyt;
+                document.getElementById("kuvaus").textContent = data.weather[0].description;
+                document.getElementById("lampotila").textContent = data.main.temp.toFixed(1) + "°C";
+                document.getElementById("tuuli").textContent = data.wind.speed.toFixed(2) + " m/s";
 
-                document.getElementById("vastaus").innerHTML = tiedot;
+                var iconCode = data.weather[0].icon;
+                var iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+                document.getElementById("weather-icon").innerHTML = `<img src="${iconUrl}" alt="Sääkuvake" class="weather-icon">`;
             }
 
         </script>

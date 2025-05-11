@@ -61,8 +61,14 @@
         <p>
             <input type="text" id="pokemonName" placeholder="Kirjoita Pokemonin nimi">
             <button onclick="poke()">Hae</button>
+            <button onclick="kaanna()">Käännä</button>
 
         <div id="nimi">Kirjoita laatikkoon haettavan Pokemonin nimi.</div>
+        <p id="kuva2"></p>
+        <p id="tyyppi"></p>
+        <p id="paino"></p>
+        <p id="pituus"></p>
+        </p>
 
         <script>
 
@@ -99,6 +105,40 @@
                 // Kirjoitetaan kuva & nimi ja tyhjennetään hakumuuttuja
                 document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
                 document.getElementById("nimi").innerHTML = "<b>" + name + "<b>";
+                document.getElementById("pokemonName").value = "";
+                document.getElementById("tyyppi").innerHTML = "";
+                document.getElementById("paino").innerHTML = "";
+                document.getElementById("pituus").innerHTML = "";
+            }
+
+            function kaanna() {
+
+                const pokeName = document.getElementById("pokemonName").value.toLowerCase();
+                let name = document.getElementById("pokemonName").value;
+
+                if (!pokeName) {
+                    document.getElementById("vastaus").innerHTML = "<p>Kirjoita ensin Pokemonin nimi</p>";
+                }
+
+                fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
+
+                    .then(function (response) {
+                        return response.json();
+                    })
+
+                    .then(function (data) {
+                        let pokeurl = data.sprites.back_default;
+                        let tyyppi = data.types.map(t => t.type.name).join(", ");
+                        let paino = data.weight;
+                        let pituus = data.height;
+
+                        document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
+                        document.getElementById("nimi").innerHTML = "<b>" + name + "<b>";
+                        document.getElementById("tyyppi").innerHTML = "<p>Tyyppi: " + tyyppi + "</p>";
+                        document.getElementById("paino").innerHTML = "<p>Paino: " + paino + "</p>";
+                        document.getElementById("pituus").innerHTML = "<p>Pituus: " + pituus + "</p>";
+                        document.getElementById("pokemonName").value = "";
+                    })
             }
 
         </script>
