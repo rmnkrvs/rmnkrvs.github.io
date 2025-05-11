@@ -55,20 +55,21 @@
     </nav>
 
     <main>
-        <div id="vastaus"></div>
 
-        <h1>Pokemon haku</h1>
+        <h1>Käännetyn Pokemonin hakeminen</h1>
+        <div id="teksti">Kirjoita laatikkoon haettavan Pokemonin nimi.</div>
+        <br>
         <p>
             <input type="text" id="pokemonName" placeholder="Kirjoita Pokemonin nimi">
-            <button onclick="poke()">Hae</button>
             <button onclick="kaanna()">Käännä</button>
-
-        <div id="nimi">Kirjoita laatikkoon haettavan Pokemonin nimi.</div>
-        <p id="kuva2"></p>
-        <p id="tyyppi"></p>
-        <p id="paino"></p>
-        <p id="pituus"></p>
         </p>
+        <div id="vastaus">
+            <h3 id="nimi"></h3>
+            <p id="tyyppi"></p>
+            <p id="paino"></p>
+            <p id="pituus"></p>
+            <div id="kuva2"></div>
+        </div>
 
         <script>
 
