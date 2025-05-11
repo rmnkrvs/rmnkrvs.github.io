@@ -27,26 +27,26 @@
    margin: 20px auto;
    padding: 45px 70px;
    border: 1px solid #ddd;
-   border-radius: 16px !important;
-   background-color: #F7F3E8 !important;
+   border-radius: 16px !important; /* Kulmien pyöristys */
+   background-color: #F7F3E8 !important; /* Korttien taustaväri */
    text-align: center;
-   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Varjostus */
  }
 
  /* Otsikot */
 
- h1 {
+ h1 { /* Pääotsikko */
    font-size: 38px;
    font-weight: bold;
-   color: #2E2E2E;
+   color: #C1440E !important;
  }
  h3 {
    font-size: 26px;
    font-weight: bold;
-   color: #C1440E;
+   color: #2E2E2E;
  }
 
- p {
+ p { /* Leipäteksti */
    font-size: 18px;
    margin: 5px 0;
    color: #2E2E2E;
@@ -78,14 +78,14 @@
  /* Tekstikenttä */
  input#pokemonName {
    padding: 9px;
-   border: 1px solid C1440E;
+   border: 1px solid C1440E; /* Reunat */
    border-radius: 8px; /* Pyöristetyt kulmat */
  }
 
  /* Buttonit */
 
  button {
-   background-color: #E2725B;
+   background-color: #E2725B; /* Nappien väri */
    border: 2px;
    border-color: #E2725B;
    border-radius: 8px !important; /* Pyöristetyt kulmat */
@@ -95,16 +95,17 @@
    cursor: pointer;
  }
  button:hover {
-   background-color: #C1440E;
+   background-color: #C1440E; 
  }
 
- .weather-icon {
+ /* Säälogo */
+ .weather-icon { 
    width: 80px;
    height: 80px;
  }
 
- /* JSON kuva */
- .img_luokka {
+  /* JSON kuva */
+ .img_luokka { 
    width: 100%;
    max-width: 300px;
    height: auto;
