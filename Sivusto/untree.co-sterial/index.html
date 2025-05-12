@@ -496,6 +496,9 @@
 				<script src="js/tiny-slider.js"></script>
 				<script>
 
+					// Ladataan quotet kun sivu latautuu
+					document.addEventListener('DOMContentLoaded', loadTestimonials);
+
 					async function loadTestimonials() {
 						try {
 							const response = await fetch('./quotes.json'); // JSON-tiedoston hakeminen
@@ -505,17 +508,17 @@
 
 							data.forEach((testimonial) => {
 								const item = document.createElement('div');
-								slide.classList.add('item');
+								item.classList.add('item');
 
 								slide.innerHTML = `
 										<blockquote class="block-testimonial">
 											<div class="author">
-												<img src="${quotes.image}" alt="${quotes.name}">
-												<h3>${quotes.name}</h3>
-												<p class="position mb-5">${quotes.country}</p>
+												<img src="${testimonial.image}" alt="${testimonial.name}">
+												<h3>${testimonial.name}</h3>
+												<p class="position mb-5">${testimonial.country}</p>
 											</div>
 											<p class="testimonial-text">&ldquo;</div>
-												&ldquo;${quotes.testimonial}&rdquo;
+												&ldquo;${testimonial.testimonial}&rdquo;
 											</p>
 										</blockquote>`;
 
@@ -532,7 +535,11 @@
 								autoplayTimeout: 5000,
 								controls: true,
 								nav: false,
-								speed: 400
+								speed: 400,
+								loop: true,
+								mouseDrag: true,
+								swipeAngle: false,
+								autoplayButtonOutput: false
 							}); 
 
 						} catch (error) {
@@ -540,9 +547,6 @@
 							document.getElementById('testimonial-slider').innerHTML = `<p class="text-center text-danger">Unable to load testimonials. ${error.message}</p>`;
 						}
 					}
-
-					// Ladataan quotet kun sivu latautuu
-					document.addEventListener('DOMContentLoaded', loadTestimonials);
 
 				</script>
 
