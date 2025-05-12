@@ -1,49 +1,42 @@
 [
     {
       "name": "Alice Johnson",
-      "age": 32,
       "country": "United States",
       "image": "images/testimonial.alice.jpg",
       "testimonial": "My favorite destination is Peru. It is an incredibly diverse country, offering everything from cities to jungles, mountains, deserts, and beaches. Not to mention the delicious cuisine, affordable prices, and friendly locals."
     },
     {
       "name": "Carlos Sanchez",
-      "age": 28,
       "country": "Mexico",
       "image": "images/testimonials.carlos.jpg",
       "testimonial": "I absolutely love Costa Rica. It’s a paradise for nature lovers, with rainforests, volcanoes, and beautiful beaches. Perfect for adventure and relaxation alike."
     },
     {
       "name": "Maria Fernández",
-      "age": 34,
       "country": "Spain",
       "image": "images/testimonials.maria.jpg",
       "testimonial": "Brazil stole my heart. Rio de Janeiro's energy, the incredible landscapes of Iguazu Falls, and the rich culture of Salvador are just unforgettable."
     },
     {
       "name": "James Wilson",
-      "age": 30,
       "country": "Canada",
       "image": "images/testimonials.james.jpg",
       "testimonial": "Argentina is a dream come true for any traveler. From the bustling streets of Buenos Aires to the stunning glaciers of Patagonia, it has everything."
     },
     {
       "name": "Sofia González",
-      "age": 27,
       "country": "Argentina",
       "image": "images/testimonials.sofia.jpg",
       "testimonial": "Chile has it all – deserts in the north, lush forests in the south, and the vibrant city life of Santiago. And of course, the beautiful Andes mountains."
     },
     {
       "name": "Thomas Baker",
-      "age": 36,
       "country": "United Kingdom",
       "image": "images/testimonials.thomas.jpg",
       "testimonial": "I was blown away by Colombia. Cartagena's colonial charm, the lush coffee region, and the energetic Medellín – it’s an amazing country full of surprises."
     },
     {
       "name": "Luisa Costa",
-      "age": 29,
       "country": "Portugal",
       "image": "images/testimonials.luisa.jpg",
       "testimonial": "Ecuador is a hidden gem. From the Amazon rainforest to the Galápagos Islands, it’s perfect for nature enthusiasts and adventure seekers."
