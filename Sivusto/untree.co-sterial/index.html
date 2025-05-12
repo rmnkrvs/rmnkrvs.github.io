@@ -412,6 +412,8 @@
 
 				<!-- Matkailijoiden quotet -->
 
+				<!-- Sliderin tyylit -->
+
 				<style>
 					.wide-slider-testimonial-wrap {
 						max-width: 1200px;
@@ -454,8 +456,15 @@
 					}
 
 					/* Piilotetaan Tiny Slider oletusnuolet */
-					.tns-controls {
+					.tns-controls,
+					.tns-nav,
+					.prevnext-testimonial,
+					.wide-slider-testimonial .prev,
+					.wide-slider-testimonial .next {
 						display: none !important;
+						visibility: hidden !important;
+						opacity: 0 !important;
+						pointer-events: none !important;
 					}
 
 					/* Slider buttonien muotoilu */
@@ -532,7 +541,7 @@
 								slideBy: 1, // Liukuu yksi kerrallaan
 								autoplay: true,
 								autoplayTimeout: 5000,
-								controls: true,
+								controls: false,
 								nav: false,
 								speed: 500,
 								loop: true,
