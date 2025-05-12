@@ -392,7 +392,7 @@
 
 		<h2 class="heading mb-5 text-center">Testimonials</h2>
 
-		<!-- Slider Controls -->
+		<!-- Slider Controls
 
 		<div class="text-center mb-5">
 			<div id="prevnext-testimonial">
@@ -403,6 +403,12 @@
 					<span class="icon-chevron-right"></span>
 				</span>
 			</div>
+		</div> -->
+
+		 <!-- Kauniit navigointipainikkeet -->
+		 <div class="testimonial-navigation">
+			<button class="testimonial-prev" onclick="testimonialPrev()">&#8249;</button>
+			<button class="testimonial-next" onclick="testimonialNext()">&#8250;</button>
 		</div>
 
 		<!-- Quote slider -->
@@ -536,6 +542,36 @@
 					.tns-controls {
 						display: none !important;
 					}
+
+					/* Slider buttonien muotoilu */
+
+					.testimonial-navigation {
+						position: absolute;
+						top: 50%;
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						transform: translateY(-50%);
+						pointer-events: none;
+					}
+
+					.testimonial-prev,
+					.testimonial-next {
+						background: rgba(0, 0, 0, 0.5);
+						color: #fff;
+						border: none;
+						font-size: 24px;
+						padding: 10px;
+						border-radius: 50%;
+						pointer-events: auto;
+						cursor: pointer;
+						transition: background 0.3s;
+					}
+
+					.testimonial-prev:hover,
+					.testimonial-next:hover {
+						background: rgba(0, 0, 0, 0.8);
+					}
 				</style>
 
 				<!-- JSON-tietojen tuominen tietueesta -->
@@ -574,7 +610,7 @@
 
 							// Käynnistetään Tiny Slider 
 
-							tns({
+							testimonialSliderInstance = tns({
 								container: "#testimonial-slider",
 								items: 3, // Näytetään 3 suositusta kerrallaan
 								gutter: 20, // Välit elementtien välillä
@@ -600,6 +636,16 @@
 							console.error('Error loading testimonials:', error);
 							document.getElementById('testimonial-slider').innerHTML = `<p class="text-center text-danger">Unable to load testimonials. ${error.message}</p>`;
 						}
+					}
+
+					// Mukautettujen painikkeiden toiminnallisuus
+
+					function testimonialPrev() {
+						testimonialSliderInstance.goTo("prev");
+					}
+
+					function testimonialNext() {
+						testimonialSliderInstance.goTo("next");
 					}
 
 				</script>
