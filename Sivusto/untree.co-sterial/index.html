@@ -510,7 +510,7 @@
 								const item = document.createElement('div');
 								item.classList.add('item');
 
-								slide.innerHTML = `
+								item.innerHTML = `
 										<blockquote class="block-testimonial">
 											<div class="author">
 												<img src="${testimonial.image}" alt="${testimonial.name}">
@@ -522,7 +522,7 @@
 											</p>
 										</blockquote>`;
 
-								slider.appendChild(slide);
+								slider.appendChild(item);
 							});
 
 							// Käynnistetään Tiny Slider 
