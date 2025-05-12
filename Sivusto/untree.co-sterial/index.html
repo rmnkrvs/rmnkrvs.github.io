@@ -392,6 +392,19 @@
 
 		<h2 class="heading mb-5 text-center">Testimonials</h2>
 
+		<!-- Slider Controls -->
+
+		<div class="text-center mb-5">
+			<div id="prevnext-testimonial">
+				<span class="prev me-3" data-controls="prev">
+					<span class="icon-chevron-left"></span>
+				</span>
+				<span class="next" data-controls="next">
+					<span class="icon-chevron-right"></span>
+				</span>
+			</div>
+		</div>
+
 		<!-- Quote slider -->
 
 		<div class="wide-slider-testimonial-wrap">
@@ -518,6 +531,11 @@
 						line-height: 1.4;
 						color: #666;
 					}
+
+					/* Piilotetaan Tiny Slider oletusnuolet */
+					.tns-controls {
+						display: none !important;
+					}
 				</style>
 
 				<!-- JSON-tietojen tuominen tietueesta -->
@@ -571,7 +589,7 @@
 								swipeAngle: false,
 								autoplayButtonOutput: false,
 								responsive: {
-									
+
 									1200: {
 										items: 3     // Suurilla näytöillä kolme
 									}
