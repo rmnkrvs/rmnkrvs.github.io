@@ -408,13 +408,11 @@
 		<!-- Quote karuselli -->
 
 		<div class="wide-slider-testimonial-wrap">
-			<!-- <div class="wide-slider-testimonial"> -->
-			<div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner" id="carousel-inner">
+			<div class="wide-slider-testimonial" id="testimonial-slider">
 
-					<!-- Matkailijoiden quotet -->
+				<!-- Matkailijoiden quotet -->
 
-					<!-- <div class="item">
+				<!-- <div class="item">
 					<blockquote class="block-testimonial">
 						<div class="author">
 							<img src="images/person_1.jpg" alt="Free template by TemplateUX">
@@ -493,47 +491,64 @@
 						&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
 					</blockquote> -->
 
-					<!-- JSON-tietojen tuominen tietueesta -->
+				<!-- JSON-tietojen tuominen tietueesta -->
 
-					<script>
-						// Ladataan quotet kun sivu latautuu
-						document.addEventListener('DOMContentLoaded', quotes);
+				<script src="js/tiny-slider.js"></script>
+				<script>
 
-						async function quotes() {
-							try {
-								const response = await fetch('quotes.json'); // JSON-tiedoston hakeminen
-								const data = await response.json();
-								const carouselInner = document.getElementById('carousel-inner');
-								carouselInner.innerHTML = ''; // Tyhjennetään 
+					async function loadTestimonials() {
+						try {
+							const response = await fetch('./quotes.json'); // JSON-tiedoston hakeminen
+							const data = await response.json();
+							const slider = document.getElementById('testimonial-slider');
+							slider.innerHTML = ''; // Tyhjennetään 
 
-								data.forEach((quotes, index) => {
-									const item = document.createElement('div');
-									item.classList.add('carousel-item');
-									if (index == 0) item.classList.add('active'); // Ensimmäinen aktiivinen
+							data.forEach((testimonial) => {
+								const item = document.createElement('div');
+								slide.classList.add('item');
 
-									item.innerHTML = `
+								slide.innerHTML = `
 										<blockquote class="block-testimonial">
 											<div class="author">
 												<img src="${quotes.image}" alt="${quotes.name}">
 												<h3>${quotes.name}</h3>
 												<p class="position mb-5">${quotes.country}</p>
 											</div>
-											<p>
-												<div class="testimonial-text">&ldquo;</div>
+											<p class="testimonial-text">&ldquo;</div>
 												&ldquo;${quotes.testimonial}&rdquo;
 											</p>
 										</blockquote>`;
-									carousel.appendChild(item);
-								});
-							} catch (error) {
-								console.error('Error loading testimonials:', error);
-							}
-						}
-					</script>
 
-				</div>
+								slider.appendChild(slide);
+							});
+
+							// Käynnistetään Tiny Slider 
+							/*
+							tns({
+								container: "#testimonial-slider",
+								items: 1,
+								slideBy: "page",
+								autoplay: true,
+								autoplayTimeout: 5000,
+								controls: true,
+								nav: false,
+								speed: 400
+							}); */
+
+						} catch (error) {
+							console.error('Error loading testimonials:', error);
+							document.getElementById('testimonial-slider').innerHTML = `<p class="text-center text-danger">Unable to load testimonials. ${error.message}</p>`;
+						}
+					}
+
+					// Ladataan quotet kun sivu latautuu
+					document.addEventListener('DOMContentLoaded', loadTestimonials);
+					
+				</script>
+
 			</div>
 		</div>
+	</div>
 
 	</div>
 
