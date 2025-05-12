@@ -491,6 +491,44 @@
 						&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
 					</blockquote> -->
 
+				<style>
+					.wide-slider-testimonial-wrap {
+						max-width: 800px;
+						margin: 0 auto;
+					}
+
+					.block-testimonial {
+						padding: 20px;
+						background: #ffffff;
+						border-radius: 10px;
+						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+					}
+
+					.block-testimonial .author {
+						display: flex;
+						align-items: center;
+						margin-bottom: 15px;
+					}
+
+					.block-testimonial .author img {
+						width: 50px;
+						height: 50px;
+						border-radius: 50%;
+						margin-right: 10px;
+					}
+
+					.block-testimonial h3 {
+						font-size: 18px;
+						margin-bottom: 5px;
+					}
+
+					.block-testimonial p {
+						font-size: 16px;
+						line-height: 1.5;
+						color: #666;
+					}
+				</style>
+
 				<!-- JSON-tietojen tuominen tietueesta -->
 
 				<script src="js/tiny-slider.js"></script>
@@ -526,7 +564,7 @@
 							});
 
 							// Käynnistetään Tiny Slider 
-							
+
 							tns({
 								container: "#testimonial-slider",
 								items: 1,
@@ -540,7 +578,7 @@
 								mouseDrag: true,
 								swipeAngle: false,
 								autoplayButtonOutput: false
-							}); 
+							});
 
 						} catch (error) {
 							console.error('Error loading testimonials:', error);
