@@ -463,7 +463,7 @@
 					<script>
 						// Ladataan quotet kun sivu latautuu
 						document.addEventListener('DOMContentLoaded', quotes);
-						
+
 						async function quotes() {
 							try {
 								const response = await fetch('quotes.json'); // JSON-tiedoston hakeminen
@@ -471,7 +471,7 @@
 								const carouselInner = document.getElementById('carousel-inner');
 								carouselInner.innerHTML = ''; // Tyhjennetään 
 						
-								data.forEach((testimonial, index) => {
+								data.forEach((quotes, index) => {
 									const item = document.createElement('div');
 									item.classList.add('carousel-item');
 									if (index == 0) item.classList.add('active'); // Ensimmäinen aktiivinen
@@ -479,13 +479,13 @@
 									item.innerHTML = `
 										<blockquote class="block-testimonial">
 											<div class="author">
-												<img src="${testimonial.image}" alt="${testimonial.name}">
-												<h3>${testimonial.name}</h3>
-												<p class="position mb-5">${testimonial.country}</p>
+												<img src="${quotes.image}" alt="${quotes.name}">
+												<h3>${quotes.name}</h3>
+												<p class="position mb-5">${quotes.country}</p>
 											</div>
 											<p>
 												<div class="testimonial-text">&ldquo;</div>
-												&ldquo;${testimonial.testimonial}&rdquo;
+												&ldquo;${quotes.testimonial}&rdquo;
 											</p>
 										</blockquote>`;
 									carousel.appendChild(item);
