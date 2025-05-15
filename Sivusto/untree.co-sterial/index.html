@@ -73,7 +73,7 @@
 					<div class="col-6 col-lg-3 text-lg-end">
 						<a class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
 						data-toggle="collapse" data-target="#main-navbar">
-							<span></span>¢
+							<span></span>
 						</a>
 					</div>
 				</div>
@@ -367,7 +367,7 @@
 
 							testimonialSliderInstance = tns({
 								container: "#testimonial-slider",
-								items: 3, // Näytetään 3 suositusta kerrallaan
+								items: 1, // Näytetään 1 suositus oletuksena
 								gutter: 20, // Välit elementtien välillä
 								slideBy: 1, // Liukuu yksi kerrallaan
 								autoplay: true,
@@ -381,13 +381,13 @@
 								autoplayButtonOutput: false,
 								responsive: {
 									0: {
-										items: 1
+										items: 1 // Pienillä näytöillä 1 kerrallaan
 									},
 									600: {
-										items: 2
+										items: 2 // Keskikokoisilla 2 
 									},
 									1200: {
-										items: 3
+										items: 3 // Suuremmilla näytöillä 3 kerralla
 									}
 								}
 							});
