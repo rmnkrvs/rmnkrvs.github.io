@@ -534,6 +534,7 @@
 
 	<!-- FAQ -->
 
+	<!--
 	<div class="section">
 		<div class="container">
 			<div class="row justify-content-between align-items-center">
@@ -560,7 +561,7 @@
 									at the coast of the Semantics, a large language ocean.
 								</div>
 							</div>
-						</div> <!-- .accordion-item -->
+						</div>
 
 						<div class="accordion-item">
 							<h2 class="mb-0">
@@ -576,7 +577,7 @@
 									into your mouth.
 								</div>
 							</div>
-						</div> <!-- .accordion-item -->
+						</div>
 						<div class="accordion-item">
 							<h2 class="mb-0">
 								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
@@ -594,7 +595,7 @@
 								</div>
 							</div>
 
-						</div> <!-- .accordion-item -->
+						</div>
 
 						<div class="accordion-item">
 							<h2 class="mb-0">
@@ -613,60 +614,13 @@
 								</div>
 							</div>
 
-						</div> <!-- .accordion-item -->
+						</div>
 
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- JSON Sää-haku -->
-
-    <div class="container mt-5 text-center">
-        <h2 class="heading mb-5 text-center">Check the Weather in Your Next Destination</h2>
-        <div class="mb-3">
-            <input type="text" id="cityInput" class="form-control" placeholder="Enter city name...">
-            <button class="btn btn-primary mt-3" onclick="loadWeather()">Search</button>
-        </div>
-
-        <div id="weather-result" class="mt-4"></div>
-    </div>
-
-    <script>
-        async function loadWeather() {
-            const apiKey = 'b178d236097142ff5416fafc23a7688e';
-            const city = document.getElementById('cityInput').value;
-            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
-    
-            try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-    
-                if (data.cod === 200) {
-                    document.getElementById('weather-result').innerHTML = `
-                        <div class="card mt-4">
-                            <div class="card-body">
-                                <h3>${data.name}, ${data.sys.country}</h3>
-                                <p><strong>Temperature:</strong> ${data.main.temp}°C</p>
-                                <p><strong>Weather:</strong> ${data.weather[0].description}</p>
-                                <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
-                                <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
-                                <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather icon">
-                            </div>
-                        </div>
-                    `;
-                } else {
-                    document.getElementById('weather-result').innerHTML = `
-                        <p class="text-danger">City not found: ${city}. Please try using the city name and country code (e.g., "Lima, PE").</p>`;
-                }
-            } catch (error) {
-                document.getElementById('weather-result').innerHTML = `
-                    <p class="text-danger">Unable to load weather data. Please try again later.</p>`;
-                console.error('Error loading weather data:', error);
-            }
-        }
-    </script> 
+	</div> -->
 
 	<!-- Blogi -->
 	<!--
@@ -750,16 +704,58 @@
 		</div>
 	</div> -->
 
-	<!-- Call to action -->
+	<!-- JSON Sää-haku -->
 
 	<div class="py-5 bg-primary">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
-					<h3 class="text-white m-0">Begin your adventurous journey here.</h3>
+					
+					<h2 class="heading mb-5 text-white m-0">Check the Weather in Your Next Destination</h2>
+
+					<div class="mb-3">
+						<input type="text" id="cityInput" class="form-control" placeholder="Enter city name...">
+						<button class="btn btn-primary btn-outline-white mt-3" onclick="loadWeather()">Search</button>
+					</div>
+			
+					<div id="weather-result" class="mt-4"></div>
 				</div>
-				<div class="col-lg-5 text-center text-lg-end">
-					<a href="#" class="btn btn-outline-white">Get started</a>
+			
+				<script>
+					async function loadWeather() {
+						const apiKey = 'b178d236097142ff5416fafc23a7688e';
+						const city = document.getElementById('cityInput').value;
+						const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
+				
+						try {
+							const response = await fetch(apiUrl);
+							const data = await response.json();
+				
+							if (data.cod === 200) {
+								document.getElementById('weather-result').innerHTML = `
+									<div class="card mt-4">
+										<div class="card-body">
+											<h3>${data.name}, ${data.sys.country}</h3>
+											<p><strong>Temperature:</strong> ${data.main.temp}°C</p>
+											<p><strong>Weather:</strong> ${data.weather[0].description}</p>
+											<p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+											<p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
+											<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather icon">
+										</div>
+									</div>
+								`;
+							} else {
+								document.getElementById('weather-result').innerHTML = `
+									<p class="text-danger">City not found: ${city}. Please try using the city name and country code (e.g., "Lima, PE").</p>`;
+							}
+						} catch (error) {
+							document.getElementById('weather-result').innerHTML = `
+								<p class="text-danger">Unable to load weather data. Please try again later.</p>`;
+							console.error('Error loading weather data:', error);
+						}
+					}
+				</script>
+
 				</div>
 			</div>
 		</div>
