@@ -89,7 +89,7 @@
 	<div class="hero overlay">
 
 		<div class="img-bg rellax">
-			<img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+			<img src="images/img-whitebeach.jpg" alt="Image" class="img-fluid">
 		</div>
 
 		<div class="container">
@@ -117,11 +117,11 @@
 				<div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
 					<div class="image-stack mb-5 mb-lg-0">
 						<div class="image-stack__item image-stack__item--bottom" data-aos="fade-up">
-							<img src="images/img_v_1.jpg" alt="Image" class="img-fluid rellax ">
+							<img src="images/beach4.jpg" alt="Image" class="img-fluid rellax ">
 						</div>
 						<div class="image-stack__item image-stack__item--top" data-aos="fade-up" data-aos-delay="100"
 							data-rellax-percentage="0.5">
-							<img src="images/img_v_2.jpg" alt="Image" class="img-fluid">
+							<img src="images/img-6.jpg" alt="Image" class="img-fluid">
 						</div>
 					</div>
 
@@ -147,43 +147,6 @@
 
 			</div>
 
-		</div>
-	</div>
-
-	<!-- Services section -->
-	<!--
-	<div class="section service-section-1">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-lg-3 mb-4 mb-lg-0">
-					<div class="heading-content" data-aos="fade-up">
-						<h2>Our <span class="d-block">Services</span></h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
-						<p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">View
-								All</a></p>
-					</div>
-				</div>
-				<div class="col-lg-9">
-					<div class="row">
-						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-							<div class="service-1">
-								<span class="icon">
-									<img src="images/svg/01.svg" alt="Image" class="img-fluid">
-								</span>
-								<div>
-									<h3>Tourism</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
 		</div>
 	</div>
 
@@ -315,8 +278,12 @@
 				<div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
 
 					<h2 class="heading mb-4">Check the Weather for Your Next Destination</h2>
-					<p>Planning your next adventure? Make sure you're prepared with the latest weather updates. Our easy-to-use weather search lets you quickly check the current conditions in your destination. Just enter the city name, and you'll see the temperature, weather description, humidity, and wind speed – all in one place. Whether you're packing for a sunny beach or a misty mountain escape, we've got you covered.</p>
-						
+					<p>Planning your next adventure? Make sure you're prepared with the latest weather updates. Our
+						easy-to-use weather search lets you quickly check the current conditions in your destination.
+						Just enter the city name, and you'll see the temperature, weather description, humidity, and
+						wind speed – all in one place. Whether you're packing for a sunny beach or a misty mountain
+						escape, we've got you covered.</p>
+
 					<div class="mb-3">
 						<input type="text" id="cityInput" class="form-control mb-2" placeholder="Enter city name...">
 						<button class="btn btn-primary" onclick="loadWeather()">Search</button>
@@ -324,12 +291,48 @@
 					<div id="weather-result" class="mt-4"></div>
 
 					<p class="my-4" data-aos="fade-up" data-aos-delay="200"></p>
+
+					<!-- Säähaun toiminnallisuudet -->
+
+					<script>
+						async function loadWeather() {
+							const apiKey = 'b178d236097142ff5416fafc23a7688e';
+							const city = document.getElementById('cityInput').value;
+							const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
+
+							try {
+								const response = await fetch(apiUrl);
+								const data = await response.json();
+
+								if (data.cod === 200) {
+									document.getElementById('weather-result').innerHTML = `
+											<div class="card mt-4">
+												<div class="card-body">
+													<h3>${data.name}, ${data.sys.country}</h3>
+													<p><strong>Temperature:</strong> ${data.main.temp}°C</p>
+													<p><strong>Weather:</strong> ${data.weather[0].description}</p>
+													<p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+													<p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
+													<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather icon">
+												</div>
+											</div>`;
+								} else {
+									document.getElementById('weather-result').innerHTML = `
+											<p class="text-danger">City not found: ${city}. Please try using the city name and country code (e.g., "Lima, PE").</p>`;
+								}
+							} catch (error) {
+								document.getElementById('weather-result').innerHTML = `
+										<p class="text-danger">Unable to load weather data. Please try again later.</p>`;
+								console.error('Error loading weather data:', error);
+							}
+						}
+					</script>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- JSON Testimonials / Recommendations from travelers-->
+	<!-- JSON Recommendations from travelers-->
 
 	<div class="section bg-light">
 
@@ -340,148 +343,7 @@
 		<div class="wide-slider-testimonial-wrap">
 			<div class="wide-slider-testimonial" id="testimonial-slider">
 
-				<!-- Matkailijoiden quotet -->
-
-				<!-- Sliderin tyylit -->
-
-				<style>
-					/* Sliderin tyylit */
-
-					.wide-slider-testimonial-wrap {
-						max-width: 1200px;
-						margin: 0 auto;
-						overflow: hidden;
-					}
-
-					.block-testimonial {
-						padding: 20px;
-						background: #ffffff;
-						border-radius: 10px;
-						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-						max-width: 450px;
-						margin: 5px;
-					}
-
-					.block-testimonial .author {
-						display: flex;
-						align-items: center;
-						margin-bottom: 15px;
-					}
-
-					.block-testimonial .author img {
-						width: 50px;
-						height: 50px;
-						border-radius: 50%;
-						margin-right: 10px;
-					}
-
-					.block-testimonial h3 {
-						font-size: 16px;
-						margin-bottom: 2px;
-						color: #333;
-					}
-
-					.block-testimonial p {
-						font-size: 14px;
-						line-height: 1.4;
-						color: #666;
-					}
-
-					/* Piilotetaan Tiny Slider oletusnuolet */
-					.tns-controls,
-					.tns-nav,
-					.prevnext-testimonial,
-					.wide-slider-testimonial .prev,
-					.wide-slider-testimonial .next {
-						display: none !important;
-						visibility: hidden !important;
-						opacity: 0 !important;
-						pointer-events: none !important;
-					}
-
-					/* Säähaun tyylit */
-
-					.weather-search-container {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						justify-content: center;
-						max-width: 600px;
-						margin: 0 auto;
-						padding: 20px;
-						text-align: center;
-					}
-
-					.weather-search-container input {
-						width: 100%;
-						max-width: 400px;
-						margin-bottom: 10px;
-						padding: 10px;
-						font-size: 16px;
-						border: 2px solid #ffffff;
-						border-radius: 5px;
-						outline: none;
-						transition: all 0.3s ease;
-					}
-
-					.weather-search-container input:focus {
-						border-color: #ff5a5f;
-						box-shadow: 0 0 10px rgba(255, 90, 95, 0.2);
-					}
-
-					.weather-search-container button {
-						padding: 10px 20px;
-						font-size: 16px;
-						border: 2px solid #ff5a5f;
-						background-color: #ff5a5f;
-						color: #ffffff;
-						border-radius: 5px;
-						cursor: pointer;
-						transition: background-color 0.3s;
-						margin-top: 10px;
-					}
-
-					.weather-search-container button:hover {
-						background-color: #e04b50;
-					}
-
-					#weather-result {
-						max-width: 400px;
-						margin-top: 20px;
-						text-align: center;
-					}
-
-					#weather-result .card {
-						text-align: center;
-						margin: 0 auto;
-						max-width: 100%;
-						padding: 20px;
-						box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-						border-radius: 10px;
-						background-color: #ffffff;
-					}
-
-					#weather-result .card img {
-						width: 80px;
-						height: 80px;
-						margin-top: 10px;
-						display: block;
-						margin-left: auto;
-						margin-right: auto;
-					}
-
-					#weather-result h3 {
-						font-weight: 700;
-						margin-bottom: 10px;
-					}
-
-					#weather-result p {
-						font-size: 16px;
-						margin: 5px 0;
-					}
-				</style>
-
-				<!-- JSON-tietojen tuominen tietueesta -->
+				<!-- Matkailijoiden quotet JSON-tietueesta -->
 
 				<script src="js/tiny-slider.js"></script>
 				<script>
@@ -552,18 +414,154 @@
 
 	</div>
 
-	<!-- CTA PALKKI -->
+	<!-- Banneri -->
 
 	<div class="py-5 bg-primary">
 		<div class="container d-flex justify-content-center">
 			<div class="weather-search-container">
-
 				<h2 class="heading mb-5 text-white m-0 align-center">Check the Weather in Your Next Destination</h2>
-
+			</div>
 		</div>
 	</div>
-	</div>
-	</div>
+
+	<!-- Etusivun tyylit -->
+
+	<style>
+		/* Sliderin tyylit */
+
+		.wide-slider-testimonial-wrap {
+			max-width: 1200px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		.block-testimonial {
+			padding: 20px;
+			background: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			max-width: 450px;
+			margin: 5px;
+		}
+
+		.block-testimonial .author {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.block-testimonial .author img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+
+		.block-testimonial h3 {
+			font-size: 16px;
+			margin-bottom: 2px;
+			color: #333;
+		}
+
+		.block-testimonial p {
+			font-size: 14px;
+			line-height: 1.4;
+			color: #666;
+		}
+
+		/* Piilotetaan Tiny Slider oletusnuolet */
+		.tns-controls,
+		.tns-nav,
+		.prevnext-testimonial,
+		.wide-slider-testimonial .prev,
+		.wide-slider-testimonial .next {
+			display: none !important;
+			visibility: hidden !important;
+			opacity: 0 !important;
+			pointer-events: none !important;
+		}
+
+		/* Säähaun tyylit */
+
+		.weather-search-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.weather-search-container input {
+			width: 100%;
+			max-width: 400px;
+			margin-bottom: 10px;
+			padding: 10px;
+			font-size: 16px;
+			border: 2px solid #ffffff;
+			border-radius: 5px;
+			outline: none;
+			transition: all 0.3s ease;
+		}
+
+		.weather-search-container input:focus {
+			border-color: #ff5a5f;
+			box-shadow: 0 0 10px rgba(255, 90, 95, 0.2);
+		}
+
+		.weather-search-container button {
+			padding: 10px 20px;
+			font-size: 16px;
+			border: 2px solid #ff5a5f;
+			background-color: #ff5a5f;
+			color: #ffffff;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			margin-top: 10px;
+		}
+
+		.weather-search-container button:hover {
+			background-color: #e04b50;
+		}
+
+		#weather-result {
+			max-width: 400px;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		#weather-result .card {
+			text-align: center;
+			margin: 0 auto;
+			max-width: 100%;
+			padding: 20px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			background-color: #ffffff;
+		}
+
+		#weather-result .card img {
+			width: 80px;
+			height: 80px;
+			margin-top: 10px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#weather-result h3 {
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		#weather-result p {
+			font-size: 16px;
+			margin: 5px 0;
+		}
+	</style>
 
 	<!-- Footer -->
 
@@ -574,7 +572,8 @@
 				<div class="col-lg-4">
 					<div class="widget">
 						<h3>About Passport<span class="text-primary">.</span> </h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and
+							Consonantia,
 							there live the blind texts.</p>
 					</div> <!-- /.widget -->
 					<div class="widget">
