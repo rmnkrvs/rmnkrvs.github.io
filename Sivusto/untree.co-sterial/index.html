@@ -66,31 +66,12 @@
 					<div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
 						<ul class="js-clone-nav  text-center site-menu p-0 m-0">
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="about.html">About us</a></li>
-							<li class="has-children">
-								<a href="#">Dropdown</a>
-								<ul class="dropdown">
-									<li><a href="#">Menu One</a></li>
-									<li class="has-children">
-										<a href="#">Menu Two</a>
-										<ul class="dropdown">
-											<li><a href="#">Sub Menu One</a></li>
-											<li><a href="#">Sub Menu Two</a></li>
-											<li><a href="#">Sub Menu Three</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Menu Three</a></li>
-								</ul>
-							</li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="blog.html">Blog</a></li>
+							<li><a href="about.html">Destinations</a></li>
+							<li><a href="services.html">Recommendations</a></li>
+							<li><a href="blog.html">Weather</a></li>
 						</ul>
 					</div>
 					<div class="col-6 col-lg-3 text-lg-end">
-						<ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu ">
-							<li class="cta-button"><a href="contact.html">Contact Us</a></li>
-						</ul>
-
 						<a href="#"
 							class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
 							data-toggle="collapse" data-target="#main-navbar">
@@ -170,7 +151,7 @@
 	</div>
 
 	<!-- Services section -->
-
+	<!--
 	<div class="section service-section-1">
 		<div class="container">
 			<div class="row">
@@ -323,46 +304,36 @@
 
 	</div>
 
-	<!-- Tekstikatkelma -->
+	<!-- JSON Sää-haku -->
 
 	<div class="section">
 		<div class="container">
 			<div class="row justify-content-between align-items-center">
 				<div class="col-lg-5 mb-4 mb-lg-0 order-lg-2" data-aos="fade-up">
-					<img src="images/img-1.jpg" alt="Image" class="img-fluid">
+					<img src="images/img-7.jpg" alt="Image" class="img-fluid">
 				</div>
 				<div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
-					<h2 class="heading mb-4">Sweet Memories Come To Life Again</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-						live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-						a large language ocean.</p>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It
-						is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-					<p class="my-4" data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-primary">Read
-							more</a></p>
+
+					<h2 class="heading mb-4">Check the Weather for Your Next Destination</h2>
+					<p>Planning your next adventure? Make sure you're prepared with the latest weather updates. Our easy-to-use weather search lets you quickly check the current conditions in your destination. Just enter the city name, and you'll see the temperature, weather description, humidity, and wind speed – all in one place. Whether you're packing for a sunny beach or a misty mountain escape, we've got you covered.</p>
+						
+					<div class="mb-3">
+						<input type="text" id="cityInput" class="form-control mb-2" placeholder="Enter city name...">
+						<button class="btn btn-primary" onclick="loadWeather()">Search</button>
+					</div>
+					<div id="weather-result" class="mt-4"></div>
+
+					<p class="my-4" data-aos="fade-up" data-aos-delay="200"></p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Testimonials / Recommendations from travelers-->
+	<!-- JSON Testimonials / Recommendations from travelers-->
 
 	<div class="section bg-light">
 
 		<h2 class="heading mb-5 text-center">Traveller Recommendations</h2>
-
-		<!-- Slider Controls
-
-		<div class="text-center mb-5">
-			<div id="prevnext-testimonial">
-				<span class="prev me-3" data-controls="prev">
-					<span class="icon-chevron-left"></span>
-				</span>
-				<span class="next" data-controls="next">
-					<span class="icon-chevron-right"></span>
-				</span>
-			</div>
-		</div> -->
 
 		<!-- Quote slider -->
 
@@ -428,7 +399,7 @@
 						pointer-events: none !important;
 					}
 
-					/* Säähaun tyylit */ 
+					/* Säähaun tyylit */
 
 					.weather-search-container {
 						display: flex;
@@ -449,21 +420,64 @@
 						font-size: 16px;
 						border: 2px solid #ffffff;
 						border-radius: 5px;
+						outline: none;
+						transition: all 0.3s ease;
+					}
+
+					.weather-search-container input:focus {
+						border-color: #ff5a5f;
+						box-shadow: 0 0 10px rgba(255, 90, 95, 0.2);
 					}
 
 					.weather-search-container button {
 						padding: 10px 20px;
 						font-size: 16px;
-						border: 2px solid #ffffff;
-						background-color: transparent;
+						border: 2px solid #ff5a5f;
+						background-color: #ff5a5f;
 						color: #ffffff;
 						border-radius: 5px;
 						cursor: pointer;
 						transition: background-color 0.3s;
+						margin-top: 10px;
 					}
 
 					.weather-search-container button:hover {
-						background-color: rgba(255, 255, 255, 0.1);
+						background-color: #e04b50;
+					}
+
+					#weather-result {
+						max-width: 400px;
+						margin-top: 20px;
+						text-align: center;
+					}
+
+					#weather-result .card {
+						text-align: center;
+						margin: 0 auto;
+						max-width: 100%;
+						padding: 20px;
+						box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+						border-radius: 10px;
+						background-color: #ffffff;
+					}
+
+					#weather-result .card img {
+						width: 80px;
+						height: 80px;
+						margin-top: 10px;
+						display: block;
+						margin-left: auto;
+						margin-right: auto;
+					}
+
+					#weather-result h3 {
+						font-weight: 700;
+						margin-bottom: 10px;
+					}
+
+					#weather-result p {
+						font-size: 16px;
+						margin: 5px 0;
 					}
 				</style>
 
@@ -538,60 +552,16 @@
 
 	</div>
 
-	<!-- JSON Sää-haku -->
+	<!-- CTA PALKKI -->
 
 	<div class="py-5 bg-primary">
 		<div class="container d-flex justify-content-center">
 			<div class="weather-search-container">
 
-					<h2 class="heading mb-5 text-white m-0 align-center">Check the Weather in Your Next Destination</h2>
+				<h2 class="heading mb-5 text-white m-0 align-center">Check the Weather in Your Next Destination</h2>
 
-					<div class="mb-3">
-						<input type="text" id="cityInput" class="form-control" placeholder="Enter city name...">
-						<!-- Hakukenttä -->
-						<button class="btn btn-primary btn-outline-white mt-3" onclick="loadWeather()">Search</button>
-						<!-- Button -->
-					</div>
-
-					<div id="weather-result" class="mt-4"></div> <!-- Hakutulokset -->
-				</div>
-
-				<script>
-					async function loadWeather() {
-						const apiKey = 'b178d236097142ff5416fafc23a7688e';
-						const city = document.getElementById('cityInput').value;
-						const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
-
-						try {
-							const response = await fetch(apiUrl);
-							const data = await response.json();
-
-							if (data.cod === 200) {
-								document.getElementById('weather-result').innerHTML = `
-									<div class="card mt-4">
-										<div class="card-body">
-											<h3>${data.name}, ${data.sys.country}</h3>
-											<p><strong>Temperature:</strong> ${data.main.temp}°C</p>
-											<p><strong>Weather:</strong> ${data.weather[0].description}</p>
-											<p><strong>Humidity:</strong> ${data.main.humidity}%</p>
-											<p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
-											<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather icon">
-										</div>
-									</div>`;
-							} else {
-								document.getElementById('weather-result').innerHTML = `
-									<p class="text-danger">City not found: ${city}. Please try using the city name and country code (e.g., "Lima, PE").</p>`;
-							}
-						} catch (error) {
-							document.getElementById('weather-result').innerHTML = `
-								<p class="text-danger">Unable to load weather data. Please try again later.</p>`;
-							console.error('Error loading weather data:', error);
-						}
-					}
-				</script>
-
-			</div>
 		</div>
+	</div>
 	</div>
 	</div>
 
